@@ -683,15 +683,4 @@ footer.page-footer {
     .showcase-media {
         min-height: 180px;
     }
-    .page-hero {
-    /* El gradiente va PRIMERO, la imagen va DESPUÉS, separados por una coma */
-    background-image: 
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), 
-        url('../Imagenes/Dunas.png');
-    
-    /* Esto asegura que la imagen cubra todo el espacio sin deformarse */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 }
