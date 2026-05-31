@@ -687,7 +687,7 @@ footer.page-footer {
     /* El gradiente va PRIMERO, la imagen va DESPUÉS, separados por una coma */
     background-image: 
         linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), 
-        url('imagenes/tu_foto_de_fondo.jpg');
+        url('Imagenes/Dunas.png');
     
     /* Esto asegura que la imagen cubra todo el espacio sin deformarse */
     background-size: cover;
