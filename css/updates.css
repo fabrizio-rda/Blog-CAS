@@ -5,6 +5,9 @@
     --ink: #0c1119;
     --navy-deep: #0e1628;
     --navy-mid: #172944;
+    --blue-start: #245b97;
+    --blue-mid: #337fbe;
+    --blue-end: #66b9e4;
 }
 
 /* ——— Inicio ——— */
@@ -27,7 +30,7 @@
     position: absolute;
     inset: auto -8% -42% 42%;
     height: 70%;
-    background: radial-gradient(circle, rgba(91, 155, 213, 0.16), transparent 68%);
+    background: radial-gradient(circle, rgba(91, 155, 213, 0.14), transparent 68%);
     pointer-events: none;
 }
 
@@ -46,7 +49,7 @@
     margin: 0;
     max-width: 760px;
     font-family: var(--quote);
-    font-size: clamp(2.2rem, 4.8vw, 4.35rem);
+    font-size: clamp(2.15rem, 4.5vw, 4rem);
     font-weight: 600;
     line-height: 1.08;
     letter-spacing: -0.028em;
@@ -84,343 +87,285 @@
     transform: translateY(-2px);
 }
 
-/* Las secciones claras de Inicio rompen el bloque oscuro continuo. */
+/* Inicio: solo la sección Explorar queda clara; las 3 tarjetas comparten el degradé. */
 .main-content > .section:not(.dark-section) {
     background: var(--cream-soft);
     color: var(--navy-deep);
 }
 
-.main-content > .section:not(.dark-section) .section-header h2 {
-    color: #53677b;
-}
+.main-content > .section:not(.dark-section) .section-header h2 { color: #53677b; }
+.main-content > .section:not(.dark-section) .section-header p { color: var(--navy-deep); }
 
-.main-content > .section:not(.dark-section) .section-header p {
-    color: var(--navy-deep);
-}
-
-.cards-grid .card-link {
+.cards-grid .card-link,
+.cards-grid .card-link:nth-child(1),
+.cards-grid .card-link:nth-child(2),
+.cards-grid .card-link:nth-child(3) {
     min-height: 245px;
     justify-content: center;
-    border-color: rgba(14, 22, 40, 0.12);
-    box-shadow: 0 12px 28px rgba(14, 22, 40, 0.08);
-}
-
-.cards-grid .card-link:nth-child(1) {
-    background: #fff;
-    color: var(--navy-deep);
-}
-
-.cards-grid .card-link:nth-child(2) {
-    background: var(--cream);
-    color: var(--navy-deep);
-}
-
-.cards-grid .card-link:nth-child(3) {
-    background: linear-gradient(135deg, #173e70 0%, #2f75b9 58%, #77c3ea 100%);
+    background: linear-gradient(135deg, var(--blue-start) 0%, var(--blue-mid) 58%, var(--blue-end) 100%);
     color: #fff;
     border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 12px 28px rgba(14, 22, 40, 0.12);
 }
 
-.cards-grid .card-link .thumb {
+.cards-grid .card-link .thumb,
+.cards-grid .card-link:nth-child(2) .thumb {
     width: 104px;
     height: 104px;
-    background: #fff;
-    border: 1px solid rgba(14, 22, 40, 0.12);
-    box-shadow: 0 8px 20px rgba(14, 22, 40, 0.12);
+    padding: 0;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    box-shadow: 0 8px 20px rgba(14, 22, 40, 0.16);
 }
 
-.cards-grid .card-link:nth-child(2) .thumb {
-    width: 116px;
-    height: 116px;
-    padding: 7px;
-}
-
-.cards-grid .card-link:nth-child(2) .thumb img {
-    border-radius: 50%;
-    filter: contrast(1.06) saturate(1.08);
-}
-
+.cards-grid .card-link .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.cards-grid .card-link span,
 .cards-grid .card-link:nth-child(1) span,
-.cards-grid .card-link:nth-child(2) span {
-    color: #596b7c;
-}
+.cards-grid .card-link:nth-child(2) span,
+.cards-grid .card-link:nth-child(3) span { color: rgba(255, 255, 255, 0.82); }
 
-.cards-grid .card-link:nth-child(3) span {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.dark-section {
-    background: var(--navy-mid);
-}
-
-.dark-section .section-header h2 {
-    color: #9abbe3;
-}
-
-.dark-section .project-list li {
-    color: #d8e3ef;
-}
+.dark-section { background: var(--navy-mid); }
+.dark-section .section-header h2 { color: #9abbe3; }
+.dark-section .project-list li { color: #d8e3ef; }
 
 .logo-grid .project-card {
-    background: #fff;
-    color: var(--navy-deep);
-    border-color: rgba(14, 22, 40, 0.12);
-    box-shadow: 0 12px 28px rgba(14, 22, 40, 0.08);
+    background: var(--surface-raised);
+    color: var(--text);
+    border-color: var(--border);
+    box-shadow: none;
 }
 
-.logo-grid .project-card:nth-child(even) {
-    background: var(--cream);
-}
+.logo-grid .project-card .logo-wrap { background: var(--bg); }
+.logo-grid .project-card a.title { color: var(--text); }
 
-.logo-grid .project-card .logo-wrap {
-    background: var(--cream-pale);
-}
-
-.logo-grid .project-card a.title {
-    color: var(--navy-deep);
-}
-
-/* ——— Cabeceras internas ——— */
+/* ——— Banners internos ——— */
 .page-hero {
-    background: linear-gradient(135deg, var(--cream) 0%, var(--cream-pale) 68%, #d9e8f2 100%);
+    background: linear-gradient(135deg, var(--cream) 0%, var(--cream-pale) 72%, #e1ebf0 100%);
     border-bottom: 1px solid rgba(14, 22, 40, 0.15);
     color: var(--navy-deep);
 }
+.page-hero h1 { color: var(--navy-deep); }
+.page-hero .subtitle { color: #536b82; }
 
-.page-hero h1 {
-    color: var(--navy-deep);
-}
-
-.page-hero .subtitle {
-    color: #536b82;
-}
-
-/* ——— Páginas individuales de experiencias y proyectos ——— */
-.detail-content {
-    max-width: 900px;
-    display: flex;
-    flex-direction: column;
-}
-
-.detail-visual {
-    order: -2;
-    width: 100%;
-    margin: 0 0 2rem;
-    overflow: hidden;
-    border: 1px solid rgba(232, 221, 201, 0.42);
-    border-radius: 18px;
-    background: var(--cream-pale);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
-}
-
-.detail-visual img {
-    display: block;
-    width: 100%;
-    height: clamp(240px, 42vw, 430px);
-    object-fit: cover;
-}
-
-.detail-visual--contain img {
-    object-fit: contain;
-    padding: clamp(1.5rem, 5vw, 3rem);
-    background: var(--cream-pale);
-}
-
-.detail-visual figcaption {
-    padding: 0.75rem 1rem;
-    background: var(--cream);
-    color: #435669;
-    font-size: 0.78rem;
-    text-align: center;
-}
-
-.detail-content > .showcase-placeholder,
-.detail-image-placeholder {
-    order: -2;
-    width: 100%;
-    max-width: none;
-    min-height: 300px;
-    margin: 0 0 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px dashed rgba(14, 22, 40, 0.25);
-    border-radius: 18px;
+/* La página general de experiencias conserva su banner oscuro original. */
+.page-experiences-index .page-hero {
     background:
-        linear-gradient(135deg, rgba(232, 221, 201, 0.98), rgba(251, 248, 242, 0.98)),
-        linear-gradient(135deg, #173e70, #77c3ea);
-    color: #42586d;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+        radial-gradient(ellipse 70% 80% at 100% 0%, rgba(42, 108, 184, 0.25), transparent),
+        var(--surface-raised);
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
 }
+.page-experiences-index .page-hero h1 { color: var(--text); }
+.page-experiences-index .page-hero .subtitle { color: var(--text-muted); }
 
-.detail-section {
-    border-radius: 16px;
-    border-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-}
-
-.detail-content .detail-section:nth-of-type(odd) {
-    background: var(--cream-soft);
-    border-color: rgba(14, 22, 40, 0.12);
-    color: var(--navy-deep);
-}
-
-.detail-content .detail-section:nth-of-type(odd) h2,
-.detail-content .detail-section:nth-of-type(odd) h3 {
-    color: #174f86;
-}
-
-.detail-content .detail-section:nth-of-type(odd) p,
-.detail-content .detail-section:nth-of-type(odd) li {
-    color: #32475b;
-}
-
-.detail-content .detail-section:nth-of-type(even) {
-    background: var(--navy-mid);
-    border-color: rgba(255, 255, 255, 0.1);
-}
-
-.detail-content .detail-section:nth-of-type(even) p,
-.detail-content .detail-section:nth-of-type(even) li {
-    color: #d3dfeb;
-}
-
-.detail-content .detail-section:nth-of-type(even) h2,
-.detail-content .detail-section:nth-of-type(even) h3 {
-    color: #86bce9;
-}
-
-.detail-back {
-    align-self: flex-start;
-    padding: 0.72rem 1rem;
-    border: 1px solid rgba(232, 221, 201, 0.35);
-    border-radius: 999px;
-}
-
-/* ——— Perfil ——— */
+/* ——— Perfil: banner beige, contenido vuelve al diseño oscuro original ——— */
 .page-profile .content-wrap {
-    max-width: 930px;
+    max-width: 720px;
+    background: transparent;
 }
 
 .page-profile .profile-header {
-    padding: clamp(1.5rem, 4vw, 2.5rem);
-    border: 1px solid rgba(14, 22, 40, 0.12);
-    border-radius: 22px;
-    background: linear-gradient(135deg, var(--cream) 0%, var(--cream-pale) 100%);
-    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.13);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    padding: 0 0 2rem;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .page-profile .profile-photo {
-    width: 220px;
-    height: 220px;
-    border-radius: 22px;
-    border: 4px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 12px 28px rgba(14, 22, 40, 0.18);
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(232, 221, 201, 0.5);
+    box-shadow: none;
 }
 
-.page-profile .profile-meta .label {
-    color: #42688e;
-}
-
-.page-profile .profile-meta .name,
-.page-profile .profile-meta .subtitle {
-    color: var(--navy-deep) !important;
-}
+.page-profile .profile-meta .label { color: #9bb7d3; }
+.page-profile .profile-meta .name { color: #fff !important; }
+.page-profile .profile-meta .subtitle { color: #c6d2df !important; }
 
 .page-profile .prose {
-    margin-top: 2rem;
-    padding: clamp(1.5rem, 4vw, 2.5rem);
-    border-radius: 20px;
-    background: var(--cream-pale);
-    border: 1px solid rgba(14, 22, 40, 0.1);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
 }
 
-.page-profile .prose p {
-    color: #30465b;
-}
-
+.page-profile .prose p,
 .page-profile .prose p:nth-child(2) {
-    margin-left: clamp(-1rem, -2vw, -2rem);
-    margin-right: clamp(-1rem, -2vw, -2rem);
-    padding: 1.4rem clamp(1rem, 2vw, 2rem);
-    background: linear-gradient(120deg, #173e70 0%, #2f75b9 65%, #6bbbe5 100%);
-    color: #fff;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    background: transparent;
+    color: #d9e1ea;
+    line-height: 1.75;
 }
 
-/* ——— CAS e IB ——— */
-.page-cas .content-wrap {
-    max-width: 980px;
-}
+/* ——— CAS e IB: tarjetas beige, cabeceras internas en degradé ——— */
+.page-cas .content-wrap { max-width: 980px; }
 
-.page-cas .info-card {
-    border-radius: 22px;
-    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12);
-}
-
-.page-cas .info-card:nth-of-type(1) {
-    background: var(--cream-soft);
-    border-color: rgba(14, 22, 40, 0.12);
-}
-
+.page-cas .info-card,
+.page-cas .info-card:nth-of-type(1),
 .page-cas .info-card:nth-of-type(2) {
-    background: #fff;
-    border-color: rgba(14, 22, 40, 0.12);
+    background: var(--cream-soft);
+    border-color: rgba(14, 22, 40, 0.14);
+    border-radius: 20px;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
 }
 
 .page-cas .info-card h2,
 .page-cas .info-card p,
 .page-cas .info-card li,
 .page-cas .cas-pillars strong,
-.page-cas .cas-pillars span {
-    color: #30465b;
-}
-
+.page-cas .cas-pillars span { color: #30465b; }
 .page-cas .info-card h2,
-.page-cas .cas-pillars strong {
-    color: var(--navy-deep);
-}
+.page-cas .cas-pillars strong { color: var(--navy-deep); }
 
 .page-cas .info-card > .content-wrap {
     max-width: none;
     padding: 0;
 }
 
-.page-cas .profile-header {
+.page-cas .profile-header,
+.page-cas .info-card:nth-of-type(2) .profile-header {
     margin: 1rem 0 1.8rem;
     padding: 1.3rem;
+    border: 0;
     border-radius: 18px;
-    background: var(--cream);
-    border: 1px solid rgba(14, 22, 40, 0.1);
-}
-
-.page-cas .info-card:nth-of-type(2) .profile-header {
-    background: linear-gradient(120deg, #173e70 0%, #2f75b9 60%, #75c3e8 100%);
+    background: linear-gradient(120deg, var(--blue-start) 0%, var(--blue-mid) 62%, var(--blue-end) 100%);
 }
 
 .page-cas .profile-photo {
-    width: 190px;
-    height: 190px;
+    width: 180px;
+    height: 180px;
     border-radius: 16px;
     object-fit: contain;
     padding: 0.45rem;
     background: #fff;
+    border: 0;
 }
 
 .page-cas .profile-meta .name,
-.page-cas .profile-meta .subtitle {
-    color: var(--navy-deep) !important;
-}
-
+.page-cas .profile-meta .subtitle,
 .page-cas .info-card:nth-of-type(2) .profile-meta .name,
 .page-cas .info-card:nth-of-type(2) .profile-meta .subtitle {
     color: #fff !important;
 }
 
-/* La página general de experiencias conserva sus bandas azul-celeste. */
+/* ——— Experiencias y proyectos individuales: cuerpo oscuro, banner beige ——— */
+.page-experience-detail .content-wrap,
+.page-project .content-wrap {
+    max-width: 720px;
+}
+
+.page-experience-detail .detail-content,
+.page-project .detail-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-experience-detail .detail-section,
+.page-project .detail-section,
+.page-experience-detail .detail-content .detail-section:nth-of-type(odd),
+.page-experience-detail .detail-content .detail-section:nth-of-type(even),
+.page-project .detail-content .detail-section:nth-of-type(odd),
+.page-project .detail-content .detail-section:nth-of-type(even) {
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: none;
+    color: var(--text);
+}
+
+.page-experience-detail .detail-section h2,
+.page-experience-detail .detail-section h3,
+.page-project .detail-section h2,
+.page-project .detail-section h3,
+.page-experience-detail .detail-content .detail-section:nth-of-type(odd) h2,
+.page-experience-detail .detail-content .detail-section:nth-of-type(even) h2,
+.page-project .detail-content .detail-section:nth-of-type(odd) h2,
+.page-project .detail-content .detail-section:nth-of-type(even) h2 {
+    color: var(--accent);
+}
+
+.page-experience-detail .detail-section p,
+.page-experience-detail .detail-section li,
+.page-project .detail-section p,
+.page-project .detail-section li,
+.page-experience-detail .detail-content .detail-section:nth-of-type(odd) p,
+.page-experience-detail .detail-content .detail-section:nth-of-type(even) p,
+.page-experience-detail .detail-content .detail-section:nth-of-type(odd) li,
+.page-experience-detail .detail-content .detail-section:nth-of-type(even) li,
+.page-project .detail-content .detail-section:nth-of-type(odd) p,
+.page-project .detail-content .detail-section:nth-of-type(even) p,
+.page-project .detail-content .detail-section:nth-of-type(odd) li,
+.page-project .detail-content .detail-section:nth-of-type(even) li {
+    color: #c5d4e8;
+}
+
+/* Fotos como antes: contenidas, no banners gigantes. */
+.page-experience-detail .detail-visual,
+.page-project .detail-visual {
+    order: -2;
+    align-self: center;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 2rem;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.page-experience-detail .detail-visual img,
+.page-project .detail-visual img,
+.page-project .detail-visual--contain img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
+    padding: 0;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: transparent;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.page-experience-detail .detail-content > .showcase-placeholder,
+.page-experience-detail .detail-image-placeholder {
+    order: -2;
+    align-self: center;
+    width: 100%;
+    max-width: 420px;
+    min-height: 220px;
+    margin: 0 auto 2rem;
+    border: 1px dashed rgba(232, 221, 201, 0.28);
+    border-radius: 8px;
+    background: var(--surface-raised);
+    color: #9fb1c5;
+    box-shadow: none;
+}
+
+.page-experience-detail .detail-back,
+.page-project .detail-back {
+    align-self: flex-start;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+/* Página general de experiencias mantiene sus bandas y degradé azul-celeste. */
 .showcase-placeholder {
     width: 100%;
     max-width: 420px;
@@ -445,10 +390,7 @@
     color: rgba(255, 255, 255, 0.72);
 }
 
-.pending-copy {
-    opacity: 0.78;
-    font-style: italic;
-}
+.pending-copy { opacity: 0.78; font-style: italic; }
 
 @media (max-width: 768px) {
     .home-hero {
@@ -459,26 +401,18 @@
             url('../Imagenes/Dunas.png') center / cover no-repeat;
     }
 
-    .home-hero h1 {
-        font-size: clamp(2rem, 9vw, 3.35rem);
-    }
-
-    .cards-grid .card-link {
-        min-height: 220px;
-    }
-
-    .detail-content > .showcase-placeholder,
-    .detail-image-placeholder {
-        min-height: 210px;
-    }
+    .home-hero h1 { font-size: clamp(2.2rem, 10vw, 3.6rem); }
 
     .page-profile .profile-photo {
-        width: 170px;
-        height: 170px;
+        width: 160px;
+        height: 160px;
     }
 
     .page-cas .profile-photo {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
     }
+
+    .page-experience-detail .detail-content > .showcase-placeholder,
+    .page-experience-detail .detail-image-placeholder { min-height: 180px; }
 }
