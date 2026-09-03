@@ -5,12 +5,12 @@ const overlay = document.querySelector('.overlay');
 // Carga la capa visual más reciente en todas las páginas, incluso las antiguas.
 (function loadVisualRefresh() {
     const currentRefresh = [...document.querySelectorAll('link[rel="stylesheet"]')]
-        .find(link => link.href.includes('css/updates.css?v=20260903-4'));
+        .find(link => link.href.includes('css/updates.css?v=20260903-6'));
     if (currentRefresh) return;
 
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'css/updates.css?v=20260903-4';
+    link.href = 'css/updates.css?v=20260903-6';
     document.head.appendChild(link);
 })();
 
@@ -32,7 +32,9 @@ if (toggle && sidebar) {
 overlay?.addEventListener('click', closeMenu);
 
 const currentFile = decodeURIComponent(window.location.pathname.split('/').pop() || 'index.html');
+if (currentFile === 'index.html') document.body.classList.add('page-home');
 if (currentFile === 'experiencias.html') document.body.classList.add('page-experiences-index');
+if (currentFile === 'proyectos.html') document.body.classList.add('page-projects-index');
 
 // Mantiene la sección de Experiencias idéntica en todas las páginas.
 (function syncExperiencesSidebar() {
@@ -85,12 +87,9 @@ if (currentFile === 'experiencias.html') document.body.classList.add('page-exper
         ]}
     ];
 
-    const allExperienceFiles = months.flatMap(month => month.items.map(item => item[0]));
-    const isExperiencePage = currentFile === 'experiencias.html' || allExperienceFiles.includes(currentFile);
-
     const allItem = document.createElement('li');
     const allLink = document.createElement('a');
-    allLink.href = 'experiencias.html?v=20260903-4';
+    allLink.href = 'experiencias.html?v=20260903-6';
     allLink.textContent = 'Ver todas';
     if (currentFile === 'experiencias.html') allLink.classList.add('is-current');
     allItem.appendChild(allLink);
@@ -129,7 +128,6 @@ if (currentFile === 'experiencias.html') document.body.classList.add('page-exper
     });
 
     submenu.replaceChildren(fragment);
-    if (isExperiencePage) experienceDetails.open = true;
 })();
 
 // Añade imágenes a las páginas individuales sin tocar la página "Ver todas".
@@ -200,4 +198,12 @@ if (currentFile === 'experiencias.html') document.body.classList.add('page-exper
         figure.appendChild(img);
         detailContent.prepend(figure);
     }
+})();
+
+// En escritorio, los menús superiores empiezan cerrados para no tapar la página.
+(function normalizeFloatingNav() {
+    if (window.innerWidth <= 900) return;
+    document.querySelectorAll('.sidebar-nav > ul > li > details.nav-group').forEach(details => {
+        details.open = false;
+    });
 })();
