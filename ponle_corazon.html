@@ -7,8 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/updates.css?v=20260903-4">
+    <style>
+        .project-logo-circle {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 2px solid rgba(255,255,255,0.16);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+        }
+        .project-logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 14px;
+        }
+    </style>
 </head>
-<body>
+<body class="page-project">
     <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
     <div class="overlay" aria-hidden="true"></div>
     <div class="layout">
@@ -24,18 +45,53 @@
                 </ul>
             </nav>
         </aside>
+
         <main class="main-content">
-            <header class="page-hero"><h1>Ponle Corazón</h1><p class="subtitle">Proyecto CAS</p></header>
+            <header class="page-hero">
+                <h1>Ponle Corazón</h1>
+                <p class="subtitle">Proyecto CAS · Partido de exhibición de profesores</p>
+            </header>
+
             <div class="content-wrap detail-content">
-                <section class="detail-section"><h2>Descripción</h2><p>Al día que escribo esto, todavía no se hace el proyecto donde soy líder, el partido de profesores.</p></section>
-                <section class="detail-section"><h2>Objetivos</h2><p>En proceso.</p></section>
-                <section class="detail-section"><h2>Actividades realizadas</h2><p>En proceso.</p></section>
-                <section class="detail-section"><h2>Reflexión</h2><p>En proceso.</p></section>
+                <section class="detail-section">
+                    <h2>Descripción del proyecto</h2>
+                    <p>Participé como uno de los líderes del proyecto «Partido de exhibición de profesores», una actividad organizada dentro del colegio para reunir a los estudiantes alrededor de una experiencia recreativa y, al mismo tiempo, apoyar las iniciativas de CAS. Se realizaron dos partidos: uno dirigido a los estudiantes de 6.º a 8.º y otro para los de 9.º a 11.º.</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2>Planificación y organización</h2>
+                    <p>Como parte del equipo líder, coordinamos las fechas, horarios, espacios, indumentaria y materiales necesarios para los partidos. También visitamos los salones para explicar en qué consistía el proyecto, comunicar las fechas y avisar sobre la colaboración de S/2 por estudiante. Además, se coordinó la disponibilidad de agua y otros elementos necesarios para que la actividad pudiera realizarse con orden.</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2>Desarrollo de la actividad</h2>
+                    <p>Antes de cada partido recorrimos los salones para recoger las colaboraciones. El dinero fue contado y organizado de manera ordenada tanto para la primera como para la segunda fecha. Durante las actividades presentamos también una mascota representativa de CAS y apoyamos en la organización general para que los profesores y estudiantes supieran dónde estar y qué debían hacer. Ambos partidos se desarrollaron correctamente y sin inconvenientes importantes.</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2>Reflexión personal</h2>
+                    <p>Este proyecto me permitió experimentar de forma más directa lo que implica liderar una actividad con muchas personas involucradas. No bastaba con tener la idea del partido: era necesario comunicarla, organizar tiempos, coordinar recursos y asegurarnos de que cada parte funcionara. Aprendí que una buena planificación y una comunicación clara hacen que incluso una actividad grande pueda realizarse de manera ordenada.</p>
+                </section>
+
+                <section class="detail-section">
+                    <h2>Resultados de aprendizaje</h2>
+                    <ul>
+                        <li><strong>RA 3:</strong> Participé en la planificación y organización de una experiencia CAS.</li>
+                        <li><strong>RA 4:</strong> Mantuve el compromiso durante la preparación y las dos fechas del proyecto.</li>
+                        <li><strong>RA 5:</strong> Trabajé junto con otros líderes, profesores y brigadistas para coordinar la actividad.</li>
+                    </ul>
+                </section>
+
+                <div class="project-logo-circle" aria-label="Logo del proyecto Ponle Corazón">
+                    <img src="Imagenes/ponle corazon.png" alt="Ponle Corazón">
+                </div>
+
                 <a class="detail-back" href="proyectos.html">← Volver a proyectos</a>
             </div>
+
             <footer class="page-footer">Portafolio CAS · IB · fabrizio.ramirez@sir.pe · +51 990 991 863</footer>
         </main>
     </div>
-    <script src="js/menu.js?v=20260903-4"></script>
+    <script src="js/menu.js?v=20260903-5"></script>
 </body>
 </html>
