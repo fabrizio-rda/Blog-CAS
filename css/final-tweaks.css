@@ -1,0 +1,138 @@
+/* Ajustes de pulido visual · 2026-09-03 */
+
+/* ───────── Inicio: proyectos con fotografía de fondo ───────── */
+.home-project-card:first-child{
+    background:
+        linear-gradient(180deg,rgba(5,13,25,.30) 0%,rgba(5,13,25,.62) 58%,rgba(5,13,25,.90) 100%),
+        url('../Imagenes/ponle-corazon-bg.jpg') center / cover no-repeat !important;
+}
+.home-project-card:last-child{
+    background:
+        linear-gradient(180deg,rgba(5,13,25,.28) 0%,rgba(5,13,25,.64) 56%,rgba(5,13,25,.92) 100%),
+        url('../Imagenes/perros.png') center / cover no-repeat !important;
+}
+.home-project-card .project-logo{display:none !important;}
+.home-project-card > div:last-child{position:relative;z-index:2;max-width:78%;}
+.home-project-card h3,
+.home-project-card p{text-shadow:0 3px 18px rgba(0,0,0,.52);}
+.home-project-card h3{font-size:2.05rem !important;}
+
+/* ───────── Sobre mí ───────── */
+.page-profile .profile-photo{
+    border-color:rgba(6,15,29,.90) !important;
+    box-shadow:0 0 0 1px rgba(255,255,255,.10),0 18px 38px rgba(0,0,0,.26) !important;
+}
+
+/* ───────── CAS e IB ───────── */
+/* El nombre dentro del bloque ya identifica cada sección: no lo repetimos arriba. */
+.page-cas .info-card > h2{display:none !important;}
+.page-cas .info-card p,
+.page-cas .info-card li,
+.page-cas .cas-pillars strong,
+.page-cas .cas-pillars span,
+.page-cas .profile-meta .subtitle{
+    color:#ffffff !important;
+    opacity:1 !important;
+}
+.page-cas .profile-meta .name{color:#ffffff !important;}
+
+/* ───────── Experiencias: página general ───────── */
+.month-title{
+    padding:0 0 12px !important;
+    margin:0 0 22px !important;
+    background:transparent !important;
+    border:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.12) !important;
+    box-shadow:none !important;
+    color:#ffffff !important;
+    font-family:var(--quote) !important;
+    font-size:clamp(2.55rem,4.5vw,3.7rem) !important;
+    font-weight:500 !important;
+    line-height:1 !important;
+    letter-spacing:-.025em !important;
+}
+.showcase-body,
+.showcase-body h3,
+.showcase-body p,
+.showcase-body a,
+.showcase-body span,
+.showcase-link{
+    color:#ffffff !important;
+}
+.showcase-body h3{
+    margin:0 0 12px !important;
+    font-family:var(--font) !important;
+    font-size:clamp(1.45rem,2.1vw,1.8rem) !important;
+    font-weight:650 !important;
+    line-height:1.18 !important;
+    letter-spacing:-.018em !important;
+}
+.showcase-body p{
+    font-family:var(--font) !important;
+    font-size:.96rem !important;
+    line-height:1.7 !important;
+    opacity:1 !important;
+}
+.showcase-link{
+    font-family:var(--font) !important;
+    font-size:.82rem !important;
+    font-weight:600 !important;
+}
+.pending-copy{color:#ffffff !important;opacity:.80 !important;}
+
+/* ───────── Experiencias y proyectos individuales ───────── */
+/* Playfair queda reservada para el título principal. El contenido usa una sola jerarquía Inter. */
+.page-experience-detail .page-hero h1,
+.page-project .page-hero h1{
+    font-size:clamp(2.65rem,5vw,4.35rem) !important;
+    line-height:1.02 !important;
+}
+.page-experience-detail .page-hero .subtitle,
+.page-project .page-hero .subtitle{
+    color:#ffffff !important;
+    font-family:var(--font) !important;
+    font-size:.92rem !important;
+    letter-spacing:0 !important;
+}
+.page-experience-detail .detail-section h2,
+.page-project .detail-section h2{
+    margin:0 0 12px !important;
+    font-family:var(--font) !important;
+    font-size:1.35rem !important;
+    font-weight:650 !important;
+    line-height:1.25 !important;
+    letter-spacing:-.012em !important;
+    color:#ffffff !important;
+}
+.page-experience-detail .detail-section h3,
+.page-project .detail-section h3{
+    margin:16px 0 8px !important;
+    font-family:var(--font) !important;
+    font-size:1.02rem !important;
+    font-weight:650 !important;
+    line-height:1.3 !important;
+    letter-spacing:0 !important;
+    color:#ffffff !important;
+}
+.page-experience-detail .detail-section p,
+.page-experience-detail .detail-section li,
+.page-project .detail-section p,
+.page-project .detail-section li{
+    color:#ffffff !important;
+    font-family:var(--font) !important;
+    font-size:.96rem !important;
+    line-height:1.72 !important;
+}
+
+/* Evita el efecto de 'cada cuadro con una tipografía distinta'. */
+.page-experience-detail .detail-section *,
+.page-project .detail-section *{
+    text-shadow:none;
+}
+
+@media(max-width:700px){
+    .home-project-card > div:last-child{max-width:100%;}
+    .home-project-card h3{font-size:1.8rem !important;}
+    .month-title{font-size:2.55rem !important;}
+    .showcase-body h3{font-size:1.45rem !important;}
+}
