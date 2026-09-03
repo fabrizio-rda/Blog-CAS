@@ -2,6 +2,18 @@ const toggle = document.querySelector('.menu-toggle');
 const sidebar = document.getElementById('sidebar');
 const overlay = document.querySelector('.overlay');
 
+// Carga la capa visual más reciente en todas las páginas, incluso las antiguas.
+(function loadVisualRefresh() {
+    const currentRefresh = [...document.querySelectorAll('link[rel="stylesheet"]')]
+        .find(link => link.href.includes('css/updates.css?v=20260903-3'));
+    if (currentRefresh) return;
+
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'css/updates.css?v=20260903-3';
+    document.head.appendChild(link);
+})();
+
 function closeMenu() {
     if (!sidebar) return;
     sidebar.classList.remove('is-open');
@@ -19,8 +31,9 @@ if (toggle && sidebar) {
 
 overlay?.addEventListener('click', closeMenu);
 
+const currentFile = decodeURIComponent(window.location.pathname.split('/').pop() || 'index.html');
+
 // Mantiene la sección de Experiencias idéntica en todas las páginas.
-// Así una página antigua no puede mostrar un menú desactualizado.
 (function syncExperiencesSidebar() {
     const nav = document.querySelector('.sidebar-nav');
     if (!nav) return;
@@ -34,8 +47,6 @@ overlay?.addEventListener('click', closeMenu);
 
     const submenu = experienceDetails.querySelector(':scope > ul.sub-menu');
     if (!submenu) return;
-
-    const currentFile = decodeURIComponent(window.location.pathname.split('/').pop() || 'index.html');
 
     const months = [
         {
@@ -96,7 +107,7 @@ overlay?.addEventListener('click', closeMenu);
 
     const allItem = document.createElement('li');
     const allLink = document.createElement('a');
-    allLink.href = 'experiencias.html?v=20260903-2';
+    allLink.href = 'experiencias.html?v=20260903-3';
     allLink.textContent = 'Ver todas';
     if (currentFile === 'experiencias.html') allLink.classList.add('is-current');
     allItem.appendChild(allLink);
@@ -137,4 +148,74 @@ overlay?.addEventListener('click', closeMenu);
     submenu.replaceChildren(fragment);
 
     if (isExperiencePage) experienceDetails.open = true;
+})();
+
+// Añade imágenes a las páginas individuales sin tocar la página "Ver todas".
+(function enhancePageVisuals() {
+    const experienceImages = {
+        'psicologia.html': ['Imagenes/psicologia.png', 'Proyecto de psicología'],
+        'rifa.html': ['Imagenes/sorteo.png', 'Rifa solidaria'],
+        'planeta.html': ['Imagenes/hora del planeta.png', 'La Hora del Planeta'],
+        'aprendiendo.html': ['Imagenes/aprendiendo}.jpg', 'Aprendiendo diferente'],
+        'reciclaje.html': ['Imagenes/Reciclaje.png', 'Actividad de reciclaje'],
+        'brigadista.html': ['Imagenes/brigadista.png', 'Recolección de reciclaje como brigadista'],
+        'bicicleta.html': ['Imagenes/bicilceta.png', 'Actividad en bicicleta'],
+        'mayo1.html': ['Imagenes/Mayo1.png', 'Sensibilización de Una mascota, un amigo'],
+        'mayo2.html': ['Imagenes/Mayo2.png', 'Ecolegio'],
+        'mayo3.html': ['Imagenes/Mayo3.jpeg', 'Organización y transporte de leña'],
+        'mayo4.html': ['Imagenes/Mayo4.png', 'Donaciones al albergue']
+    };
+
+    const pendingExperiences = new Set([
+        'junio1.html', 'junio2.html', 'junio3.html', 'junio4.html',
+        'julio1.html', 'julio2.html', 'julio3.html',
+        'agosto1.html', 'agosto2.html', 'agosto3.html'
+    ]);
+
+    const projectImages = {
+        'ponle_corazon.html': ['Imagenes/ponle corazon.png', 'Proyecto Ponle Corazón'],
+        'una_mascota.html': ['Imagenes/perros.png', 'Proyecto Una mascota, un amigo']
+    };
+
+    if (currentFile === 'perfil.html') document.body.classList.add('page-profile');
+    if (currentFile === 'cas_ib.html') document.body.classList.add('page-cas');
+
+    const detailContent = document.querySelector('.detail-content');
+
+    if (experienceImages[currentFile] && detailContent && !detailContent.querySelector('.detail-visual')) {
+        document.body.classList.add('page-experience-detail');
+        const [src, alt] = experienceImages[currentFile];
+        const figure = document.createElement('figure');
+        figure.className = 'detail-visual';
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = alt;
+        img.loading = 'eager';
+        figure.appendChild(img);
+        detailContent.prepend(figure);
+    }
+
+    if (pendingExperiences.has(currentFile) && detailContent) {
+        document.body.classList.add('page-experience-detail');
+        let placeholder = detailContent.querySelector(':scope > .showcase-placeholder');
+        if (!placeholder) {
+            placeholder = document.createElement('div');
+            detailContent.prepend(placeholder);
+        }
+        placeholder.classList.add('detail-image-placeholder');
+        placeholder.textContent = 'Fotografía de la experiencia · por añadir';
+    }
+
+    if (projectImages[currentFile] && detailContent && !detailContent.querySelector('.detail-visual')) {
+        document.body.classList.add('page-project');
+        const [src, alt] = projectImages[currentFile];
+        const figure = document.createElement('figure');
+        figure.className = 'detail-visual detail-visual--contain';
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = alt;
+        img.loading = 'eager';
+        figure.appendChild(img);
+        detailContent.prepend(figure);
+    }
 })();
