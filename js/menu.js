@@ -5,12 +5,12 @@ const overlay = document.querySelector('.overlay');
 // Carga la capa visual más reciente en todas las páginas, incluso las antiguas.
 (function loadVisualRefresh() {
     const currentRefresh = [...document.querySelectorAll('link[rel="stylesheet"]')]
-        .find(link => link.href.includes('css/updates.css?v=20260903-3'));
+        .find(link => link.href.includes('css/updates.css?v=20260903-4'));
     if (currentRefresh) return;
 
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = 'css/updates.css?v=20260903-3';
+    link.href = 'css/updates.css?v=20260903-4';
     document.head.appendChild(link);
 })();
 
@@ -32,6 +32,7 @@ if (toggle && sidebar) {
 overlay?.addEventListener('click', closeMenu);
 
 const currentFile = decodeURIComponent(window.location.pathname.split('/').pop() || 'index.html');
+if (currentFile === 'experiencias.html') document.body.classList.add('page-experiences-index');
 
 // Mantiene la sección de Experiencias idéntica en todas las páginas.
 (function syncExperiencesSidebar() {
@@ -49,57 +50,39 @@ const currentFile = decodeURIComponent(window.location.pathname.split('/').pop()
     if (!submenu) return;
 
     const months = [
-        {
-            name: 'Marzo',
-            items: [
-                ['psicologia.html', 'Proyecto de psicología'],
-                ['rifa.html', 'Compra de rifa'],
-                ['planeta.html', 'Hora del planeta']
-            ]
-        },
-        {
-            name: 'Abril',
-            items: [
-                ['aprendiendo.html', 'Aprendiendo diferente'],
-                ['reciclaje.html', 'Reciclaje'],
-                ['brigadista.html', 'Recolección de reciclaje como brigadista'],
-                ['bicicleta.html', 'Bicicleta']
-            ]
-        },
-        {
-            name: 'Mayo',
-            items: [
-                ['mayo1.html', 'Sensibilización sobre una mascota un amigo'],
-                ['mayo2.html', 'Ecolegio'],
-                ['mayo3.html', 'Organización y transporte de leña'],
-                ['mayo4.html', 'Donaciones al albergue Las patitas']
-            ]
-        },
-        {
-            name: 'Junio',
-            items: [
-                ['junio1.html', 'Experiencia 1'],
-                ['junio2.html', 'Experiencia 2'],
-                ['junio3.html', 'Experiencia 3'],
-                ['junio4.html', 'Experiencia 4']
-            ]
-        },
-        {
-            name: 'Julio',
-            items: [
-                ['julio1.html', 'Partido de exhibición'],
-                ['julio2.html', 'Rifa solidaria CAS'],
-                ['julio3.html', 'Donación de gift cards']
-            ]
-        },
-        {
-            name: 'Agosto',
-            items: [
-                ['agosto1.html', 'Manos Solidarias'],
-                ['agosto2.html', 'Donación al albergue'],
-                ['agosto3.html', 'Elaboración de una bufanda']
-            ]
-        }
+        { name: 'Marzo', items: [
+            ['psicologia.html', 'Proyecto de psicología'],
+            ['rifa.html', 'Compra de rifa'],
+            ['planeta.html', 'Hora del planeta']
+        ]},
+        { name: 'Abril', items: [
+            ['aprendiendo.html', 'Aprendiendo diferente'],
+            ['reciclaje.html', 'Reciclaje'],
+            ['brigadista.html', 'Recolección de reciclaje como brigadista'],
+            ['bicicleta.html', 'Bicicleta']
+        ]},
+        { name: 'Mayo', items: [
+            ['mayo1.html', 'Sensibilización sobre una mascota un amigo'],
+            ['mayo2.html', 'Ecolegio'],
+            ['mayo3.html', 'Organización y transporte de leña'],
+            ['mayo4.html', 'Donaciones al albergue Las patitas']
+        ]},
+        { name: 'Junio', items: [
+            ['junio1.html', 'Experiencia 1'],
+            ['junio2.html', 'Experiencia 2'],
+            ['junio3.html', 'Experiencia 3'],
+            ['junio4.html', 'Experiencia 4']
+        ]},
+        { name: 'Julio', items: [
+            ['julio1.html', 'Partido de exhibición'],
+            ['julio2.html', 'Rifa solidaria CAS'],
+            ['julio3.html', 'Donación de gift cards']
+        ]},
+        { name: 'Agosto', items: [
+            ['agosto1.html', 'Manos Solidarias'],
+            ['agosto2.html', 'Donación al albergue'],
+            ['agosto3.html', 'Elaboración de una bufanda']
+        ]}
     ];
 
     const allExperienceFiles = months.flatMap(month => month.items.map(item => item[0]));
@@ -107,7 +90,7 @@ const currentFile = decodeURIComponent(window.location.pathname.split('/').pop()
 
     const allItem = document.createElement('li');
     const allLink = document.createElement('a');
-    allLink.href = 'experiencias.html?v=20260903-3';
+    allLink.href = 'experiencias.html?v=20260903-4';
     allLink.textContent = 'Ver todas';
     if (currentFile === 'experiencias.html') allLink.classList.add('is-current');
     allItem.appendChild(allLink);
@@ -146,7 +129,6 @@ const currentFile = decodeURIComponent(window.location.pathname.split('/').pop()
     });
 
     submenu.replaceChildren(fragment);
-
     if (isExperiencePage) experienceDetails.open = true;
 })();
 
