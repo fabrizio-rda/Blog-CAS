@@ -285,14 +285,17 @@
 }
 
 .page-experience-detail .detail-section h2,
-.page-experience-detail .detail-section h3,
 .page-project .detail-section h2,
-.page-project .detail-section h3,
 .page-experience-detail .detail-content .detail-section:nth-of-type(odd) h2,
 .page-experience-detail .detail-content .detail-section:nth-of-type(even) h2,
 .page-project .detail-content .detail-section:nth-of-type(odd) h2,
 .page-project .detail-content .detail-section:nth-of-type(even) h2 {
     color: var(--accent);
+}
+
+.page-experience-detail .detail-section h3,
+.page-project .detail-section h3 {
+    color: #d9e8f6;
 }
 
 .page-experience-detail .detail-section p,
@@ -307,7 +310,7 @@
 .page-project .detail-content .detail-section:nth-of-type(even) p,
 .page-project .detail-content .detail-section:nth-of-type(odd) li,
 .page-project .detail-content .detail-section:nth-of-type(even) li {
-    color: #c5d4e8;
+    color: #eef3f8;
 }
 
 /* Fotos como antes: contenidas, no banners gigantes. */
