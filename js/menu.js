@@ -155,12 +155,12 @@ if (currentFile === 'experiencias.html') document.body.classList.add('page-exper
     ]);
 
     const projectImages = {
-        'ponle_corazon.html': ['Imagenes/ponle corazon.png', 'Proyecto Ponle Corazón'],
         'una_mascota.html': ['Imagenes/perros.png', 'Proyecto Una mascota, un amigo']
     };
 
     if (currentFile === 'perfil.html') document.body.classList.add('page-profile');
     if (currentFile === 'cas_ib.html') document.body.classList.add('page-cas');
+    if (currentFile === 'ponle_corazon.html') document.body.classList.add('page-project');
 
     const detailContent = document.querySelector('.detail-content');
 
