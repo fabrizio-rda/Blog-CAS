@@ -4,14 +4,25 @@ const overlay = document.querySelector('.overlay');
 
 // Carga la capa visual más reciente en todas las páginas, incluso las antiguas.
 (function loadVisualRefresh() {
-    const currentRefresh = [...document.querySelectorAll('link[rel="stylesheet"]')]
-        .find(link => link.href.includes('css/updates.css?v=20260903-6'));
-    if (currentRefresh) return;
+    const hasRefresh = [...document.querySelectorAll('link[rel="stylesheet"]')]
+        .some(link => link.href.includes('css/updates.css?v=20260903-7'));
 
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'css/updates.css?v=20260903-6';
-    document.head.appendChild(link);
+    if (!hasRefresh) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'css/updates.css?v=20260903-7';
+        document.head.appendChild(link);
+    }
+
+    const hasFinalTweaks = [...document.querySelectorAll('link[rel="stylesheet"]')]
+        .some(link => link.href.includes('css/final-tweaks.css?v=20260903-7'));
+
+    if (!hasFinalTweaks) {
+        const tweaks = document.createElement('link');
+        tweaks.rel = 'stylesheet';
+        tweaks.href = 'css/final-tweaks.css?v=20260903-7';
+        document.head.appendChild(tweaks);
+    }
 })();
 
 function closeMenu() {
@@ -89,7 +100,7 @@ if (currentFile === 'proyectos.html') document.body.classList.add('page-projects
 
     const allItem = document.createElement('li');
     const allLink = document.createElement('a');
-    allLink.href = 'experiencias.html?v=20260903-6';
+    allLink.href = 'experiencias.html?v=20260903-7';
     allLink.textContent = 'Ver todas';
     if (currentFile === 'experiencias.html') allLink.classList.add('is-current');
     allItem.appendChild(allLink);
