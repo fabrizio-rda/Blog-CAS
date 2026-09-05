@@ -14,7 +14,7 @@
 .page-footer{border-top-color:rgba(214,179,106,.14)!important}
 
 /* Inicio: proyectos con fotografía de fondo */
-.home-project-card:first-child{background:linear-gradient(180deg,rgba(5,13,25,.25) 0%,rgba(5,13,25,.56) 58%,rgba(5,13,25,.88) 100%),url('../Imagenes/ponle-corazon-bg.jpg') center / cover no-repeat !important;background-color:#101c2e!important}
+.home-project-card:first-child{background:linear-gradient(180deg,rgba(5,13,25,.25) 0%,rgba(5,13,25,.56) 58%,rgba(5,13,25,.88) 100%),url('../Imagenes/fondopc.jpg') center / cover no-repeat !important;background-color:#101c2e!important}
 .home-project-card:last-child{background:linear-gradient(180deg,rgba(5,13,25,.28) 0%,rgba(5,13,25,.64) 56%,rgba(5,13,25,.92) 100%),url('../Imagenes/perros.png') center / cover no-repeat !important}
 .home-project-card{border-color:rgba(214,179,106,.14)!important;box-shadow:0 24px 60px rgba(0,0,0,.18)!important;transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease!important}
 .home-project-card:hover{transform:translateY(-4px);border-color:rgba(214,179,106,.34)!important;box-shadow:0 30px 70px rgba(0,0,0,.28)!important}
