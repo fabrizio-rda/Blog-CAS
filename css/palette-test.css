@@ -1,70 +1,82 @@
-/* PALETA DE PRUEBA — 2026-09-08
-   Reversible: eliminar este stylesheet restaura la paleta anterior.
-   Hawkbit #FED46D · Mimolette #F6941D · Portland Orange #F0662A
-   Pohutukawa #6A1A29 · Catalina Blue #062375 · Midnight #070A3C
+/* PALETA DE PRUEBA 2 — Artio / forest sage — 2026-09-08
+   Reversible: styles.css + final-tweaks.css conservan la paleta original.
+   La prueba espacial anterior queda recuperable desde el historial de Git.
 */
 :root{
-  --bg:#070A3C;
-  --surface:#0A1450;
-  --surface-raised:#102064;
-  --primary:#F0662A;
-  --primary-vivid:#F6941D;
-  --primary-glow:#FED46D;
-  --band-light:#FED46D;
-  --band-light-text:#070A3C;
-  --band-alt:#F6941D;
-  --border:rgba(254,212,109,.16);
-  --border-hover:rgba(246,148,29,.55);
-  --text:#FFF8E8;
-  --text-muted:#D7C9B0;
-  --accent:#F6941D;
-  --accent-soft:rgba(240,102,42,.16);
-  --prime-gold:#F6941D;
-  --prime-gold-soft:#FED46D;
-  --prime-gold-dim:rgba(246,148,29,.22);
-  --prime-ink:#070A3C;
-  --prime-blue:#062375;
+  --bg:#F6F2E7;
+  --surface:#E9E5D6;
+  --surface-raised:#FCFAF3;
+  --primary:#304F3F;
+  --primary-vivid:#4F735F;
+  --primary-glow:#A8CDB4;
+  --band-light:#C8D7E5;
+  --band-light-text:#304F3F;
+  --band-alt:#DCE8D9;
+  --border:rgba(48,79,63,.16);
+  --border-hover:rgba(48,79,63,.42);
+  --text:#263C32;
+  --text-muted:#68796F;
+  --accent:#6F9B7D;
+  --accent-soft:rgba(111,155,125,.16);
+  --prime-gold:#6F9B7D;
+  --prime-gold-soft:#DDE7D8;
+  --prime-gold-dim:rgba(111,155,125,.20);
+  --prime-ink:#263C32;
+  --prime-blue:#C8D7E5;
 }
 
-::selection{background:rgba(240,102,42,.38)!important;color:#fff!important}
-body{background:#070A3C!important;color:#FFF8E8!important}
-.sidebar{background:#080E43!important;border-right-color:rgba(254,212,109,.18)!important}
-.sidebar-header .brand{color:#FED46D!important}
-.sidebar-nav a:hover,.sidebar-nav summary:hover{color:#FED46D!important}
-.sidebar-nav .is-current{box-shadow:inset 2px 0 0 #F0662A!important}
+::selection{background:#A8CDB4!important;color:#263C32!important}
+body{background:#F6F2E7!important;color:#263C32!important}
+.sidebar{background:#304F3F!important;border-right-color:rgba(246,242,231,.16)!important}
+.sidebar-header .brand{color:#DDE7D8!important}
+.sidebar-header h2,.sidebar-nav>ul>li>a,.sidebar-nav summary{color:#F8F5EA!important}
+.sidebar-nav a{color:#D5DED7!important}
+.sidebar-nav a:hover,.sidebar-nav summary:hover{color:#fff!important;background:rgba(168,205,180,.13)!important}
+.sidebar-nav .is-current{box-shadow:inset 2px 0 0 #A8CDB4!important;background:rgba(168,205,180,.13)!important}
+.nav-group .sub-menu{border-left-color:rgba(221,231,216,.18)!important}
 
-/* Inicio: noche profunda + luz cálida, sin estética bancaria */
+/* Inicio inspirado en la paleta Artio: bosque, salvia, crema y azul grisáceo */
 .home-page-v2 .home-hero--editorial{
   background:
-    radial-gradient(circle at 82% 16%,rgba(240,102,42,.18),transparent 27%),
-    radial-gradient(circle at 68% 78%,rgba(106,26,41,.30),transparent 34%),
-    linear-gradient(118deg,#070A3C 0%,#062375 62%,#10134D 100%)!important;
-  border-color:rgba(254,212,109,.17)!important;
+    radial-gradient(circle at 84% 18%,rgba(200,215,229,.34),transparent 28%),
+    radial-gradient(circle at 72% 86%,rgba(168,205,180,.18),transparent 35%),
+    linear-gradient(118deg,#304F3F 0%,#3B5D4B 62%,#263F34 100%)!important;
+  border-color:rgba(221,231,216,.18)!important;
 }
-.home-page-v2 .home-hero--editorial::before{background:linear-gradient(90deg,#F0662A,#FED46D,transparent)!important}
-.home-page-v2 .home-hero h1 em{background:linear-gradient(100deg,#FED46D 0%,#F6941D 48%,#F0662A 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
-.home-hero-intro{color:#E6DDCF!important}
-.home-text-link{color:#FFF8E8!important;border-bottom-color:rgba(246,148,29,.65)!important}
-.home-text-link:hover{color:#FED46D!important}
-.home-hero-index{border-left-color:rgba(254,212,109,.20)!important}
-.home-hero-index .index-rule{background:linear-gradient(90deg,#F0662A,#F6941D,#FED46D,rgba(254,212,109,0))!important}
-.home-hero-index p{color:#F1E9DC!important}
-.home-hero-index p strong{color:#FED46D!important}
-.home-hero-index small{color:#C7B9A5!important}
+.home-page-v2 .home-hero--editorial::before{background:linear-gradient(90deg,#A8CDB4,#C8D7E5,transparent)!important}
+.home-page-v2 .home-hero h1{color:#F8F5EA!important}
+.home-page-v2 .home-hero h1 em{background:linear-gradient(100deg,#DDE7D8 0%,#A8CDB4 52%,#C8D7E5 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+.hero-label{color:#DDE7D8!important}
+.home-hero-intro{color:#E5E7DE!important}
+.home-hero-link{color:#F8F5EA!important}
+.home-text-link{color:#F8F5EA!important;border-bottom-color:rgba(168,205,180,.72)!important}
+.home-text-link:hover{color:#C8D7E5!important}
+.home-hero-index{border-left-color:rgba(221,231,216,.22)!important}
+.home-hero-index .index-number{color:#F8F5EA!important}
+.home-hero-index .index-rule{background:linear-gradient(90deg,#A8CDB4,#C8D7E5,rgba(200,215,229,0))!important}
+.home-hero-index p{color:#EEF0E8!important}
+.home-hero-index p strong{color:#C8D7E5!important}
+.home-hero-index small{color:#C5D0C7!important}
 
-.home-directory-list{border-top-color:rgba(254,212,109,.20)!important}
-.home-directory-list>a{border-bottom-color:rgba(254,212,109,.13)!important}
-.home-directory-list>a:hover{background:linear-gradient(90deg,rgba(240,102,42,.10),rgba(106,26,41,.08),transparent)!important;border-bottom-color:rgba(246,148,29,.40)!important}
-.home-directory-list>a>span{color:#F6941D!important}
-.home-directory-list small{color:#FED46D!important}
-.home-directory-list p{color:#D8CDBD!important}
-.home-directory-list b{color:#F0662A!important}
+.home-section{color:#263C32!important}
+.home-section-heading h2{color:#304F3F!important}
+.home-section-heading p{color:#68796F!important}
+.eyebrow{color:#6F9B7D!important}
+.home-directory-list{border-top-color:rgba(48,79,63,.22)!important}
+.home-directory-list>a{color:#304F3F!important;border-bottom-color:rgba(48,79,63,.16)!important}
+.home-directory-list>a:hover{background:linear-gradient(90deg,rgba(168,205,180,.20),rgba(200,215,229,.13),transparent)!important;border-bottom-color:rgba(79,115,95,.40)!important}
+.home-directory-list>a>span{color:#6F9B7D!important}
+.home-directory-list small{color:#4F735F!important}
+.home-directory-list h3{color:#304F3F!important}
+.home-directory-list p{color:#68796F!important}
+.home-directory-list b{color:#4F735F!important}
 
-.home-project-card{border-color:rgba(254,212,109,.16)!important}
-.home-project-card:hover{border-color:rgba(246,148,29,.46)!important}
-.home-project-card:first-child{background:linear-gradient(180deg,rgba(7,10,60,.20),rgba(7,10,60,.58) 56%,rgba(7,10,60,.94) 100%),url('../Imagenes/fondopc.jpg') center/cover no-repeat!important}
-.home-project-card:last-child{background:linear-gradient(180deg,rgba(7,10,60,.22),rgba(106,26,41,.44) 58%,rgba(7,10,60,.94) 100%),url('../Imagenes/perros.png') center/cover no-repeat!important}
+.home-project-card{border-color:rgba(48,79,63,.20)!important}
+.home-project-card:hover{border-color:rgba(168,205,180,.58)!important}
+.home-project-card:first-child{background:linear-gradient(180deg,rgba(38,63,52,.14),rgba(38,63,52,.52) 56%,rgba(38,63,52,.94) 100%),url('../Imagenes/fondopc.jpg') center/cover no-repeat!important}
+.home-project-card:last-child{background:linear-gradient(180deg,rgba(38,63,52,.14),rgba(48,79,63,.55) 56%,rgba(38,63,52,.94) 100%),url('../Imagenes/perros.png') center/cover no-repeat!important}
+.home-project-card h3,.home-project-card p{color:#fff!important}
 
-.page-footer{border-top-color:rgba(254,212,109,.15)!important;color:#BFB3A3!important}
+.page-footer{background:#F6F2E7!important;border-top-color:rgba(48,79,63,.16)!important;color:#68796F!important}
 
-@media(max-width:800px){.home-hero-index{border-top-color:rgba(254,212,109,.20)!important;border-left:0!important}}
+@media(max-width:800px){.home-hero-index{border-top-color:rgba(221,231,216,.22)!important;border-left:0!important}}
