@@ -1,43 +1,27 @@
-/* PALETA DE PRUEBA 3 — Limoncello — 2026-09-08
-   Basada en la referencia enviada: Barley #FFF5D0, Naples #FAD564,
-   Light Olive #B4BD62, Neptune #8EBD9D, más azul cielo y azul profundo.
-   Reversible: las pruebas anteriores y la original permanecen en el historial Git.
+/* PALETA LIMONCELLO — aplicación global — 2026-09-08
+   Barley #FFF5D0 · Naples #FAD564 · Light Olive #B4BD62 · Neptune #8EBD9D
+   + cielo #B7D3EE · azul #4F8ABD · azul profundo #244B61 · bosque #354B2E
 */
-:root{
-  --bg:#FFF9E7;
-  --surface:#F4EED7;
-  --surface-raised:#FFFDF5;
-  --primary:#516B3D;
-  --primary-vivid:#77862E;
-  --primary-glow:#FAD564;
-  --band-light:#B7D3EE;
-  --band-light-text:#274F68;
-  --band-alt:#FFF5D0;
-  --border:rgba(81,107,61,.17);
-  --border-hover:rgba(250,213,100,.68);
-  --text:#2D422F;
-  --text-muted:#667360;
-  --accent:#FAD564;
-  --accent-soft:rgba(250,213,100,.22);
-  --prime-gold:#FAD564;
-  --prime-gold-soft:#FFF5D0;
-  --prime-gold-dim:rgba(250,213,100,.24);
-  --prime-ink:#244B61;
-  --prime-blue:#4F8ABD;
-}
+:root{--bg:#FFF9E7;--surface:#F4EED7;--surface-raised:#FFFDF5;--primary:#516B3D;--primary-vivid:#77862E;--primary-glow:#FAD564;--band-light:#B7D3EE;--band-light-text:#274F68;--band-alt:#FFF5D0;--border:rgba(81,107,61,.17);--border-hover:rgba(250,213,100,.68);--text:#2D422F;--text-muted:#667360;--accent:#FAD564;--accent-soft:rgba(250,213,100,.22);--prime-gold:#FAD564;--prime-gold-soft:#FFF5D0;--prime-gold-dim:rgba(250,213,100,.24);--prime-ink:#244B61;--prime-blue:#4F8ABD;--modern-bg:#FFF9E7;--modern-bg-2:#FFF5D0;--modern-surface:#F4EED7;--modern-surface-2:#E7E5C6;--modern-text:#2D422F;--modern-muted:#667360;--modern-line:rgba(81,107,61,.17);--modern-cyan:#8EBD9D;--modern-blue:#4F8ABD;--modern-violet:#B4BD62;--modern-pink:#FAD564;--modern-orange:#FAD564}
 ::selection{background:#FAD564!important;color:#2D422F!important}
-body{background:#FFF9E7!important;color:#2D422F!important}
-.sidebar{background:#354B2E!important;border-right-color:rgba(255,245,208,.18)!important}
-.sidebar-header .brand{color:#FAD564!important}
-.sidebar-header h2,.sidebar-nav>ul>li>a,.sidebar-nav summary{color:#FFF9E7!important}
-.sidebar-nav a{color:#E4E8D3!important}
-.sidebar-nav a:hover,.sidebar-nav summary:hover{color:#FAD564!important;background:rgba(250,213,100,.10)!important}
-.sidebar-nav .is-current{box-shadow:inset 2px 0 0 #FAD564!important;background:rgba(250,213,100,.11)!important}
-.nav-group .sub-menu{border-left-color:rgba(255,245,208,.18)!important}
-.home-page-v2 .home-hero--editorial{background:radial-gradient(circle at 86% 15%,rgba(250,213,100,.28),transparent 27%),radial-gradient(circle at 70% 84%,rgba(142,189,157,.20),transparent 34%),linear-gradient(118deg,#244B61 0%,#4F8ABD 58%,#8BB9DE 100%)!important;border-color:rgba(255,245,208,.24)!important}
-.home-page-v2 .home-hero--editorial::before{background:linear-gradient(90deg,#FAD564,#FFF5D0,transparent)!important}
-.home-page-v2 .home-hero h1{color:#FFFDF5!important}
-.home-page-v2 .home-hero h1 em{background:linear-gradient(100deg,#FFF5D0 0%,#FAD564 58%,#B4BD62 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
-.hero-label{color:#FFF5D0!important}.home-hero-intro{color:#F5F4E9!important}.home-hero-link{color:#FFFDF5!important}.home-text-link{color:#FFFDF5!important;border-bottom-color:#FAD564!important}.home-text-link:hover{color:#FAD564!important}.home-hero-index{border-left-color:rgba(255,245,208,.28)!important}.home-hero-index .index-number{color:#FFFDF5!important}.home-hero-index .index-rule{background:linear-gradient(90deg,#FAD564,#B4BD62,#8EBD9D,rgba(142,189,157,0))!important}.home-hero-index p{color:#FFFDF5!important}.home-hero-index p strong{color:#FAD564!important}.home-hero-index small{color:#E2E8DC!important}
-.home-section{color:#2D422F!important}.home-section-heading h2{color:#354B2E!important}.home-section-heading p{color:#667360!important}.eyebrow{color:#77862E!important}.home-directory-list{border-top-color:rgba(81,107,61,.24)!important}.home-directory-list>a{color:#354B2E!important;border-bottom-color:rgba(81,107,61,.17)!important}.home-directory-list>a:hover{background:linear-gradient(90deg,rgba(250,213,100,.22),rgba(142,189,157,.12),rgba(183,211,238,.08))!important;border-bottom-color:rgba(119,134,46,.42)!important}.home-directory-list>a>span{color:#77862E!important}.home-directory-list small{color:#4F8ABD!important}.home-directory-list h3{color:#354B2E!important}.home-directory-list p{color:#667360!important}.home-directory-list b{color:#77862E!important}
-.home-project-card{border-color:rgba(81,107,61,.22)!important}.home-project-card:hover{border-color:rgba(250,213,100,.70)!important}.home-project-card:first-child{background:linear-gradient(180deg,rgba(36,75,97,.10),rgba(53,75,46,.48) 56%,rgba(45,66,47,.94) 100%),url('../Imagenes/fondopc.jpg') center/cover no-repeat!important}.home-project-card:last-child{background:linear-gradient(180deg,rgba(79,138,189,.10),rgba(53,75,46,.50) 56%,rgba(45,66,47,.94) 100%),url('../Imagenes/perros.png') center/cover no-repeat!important}.home-project-card h3,.home-project-card p{color:#fff!important}.page-footer{background:#FFF9E7!important;border-top-color:rgba(81,107,61,.17)!important;color:#667360!important}@media(max-width:800px){.home-hero-index{border-top-color:rgba(255,245,208,.28)!important;border-left:0!important}}
+html{background:#FFF9E7!important}
+body{background:radial-gradient(circle at 92% 8%,rgba(183,211,238,.34),transparent 25%),radial-gradient(circle at 7% 78%,rgba(180,189,98,.16),transparent 30%),linear-gradient(180deg,#FFF9E7 0%,#FFF5D0 48%,#F7F3DD 100%)!important;color:#2D422F!important}
+body::before{background:#8EBD9D!important;opacity:.12!important}body::after{background:#FAD564!important;opacity:.10!important}
+/* navegación: verde en degradé, no bloque plano */
+.sidebar{background:linear-gradient(110deg,rgba(42,65,38,.97) 0%,rgba(60,88,48,.96) 48%,rgba(74,105,61,.95) 100%)!important;border-color:rgba(255,245,208,.25)!important;box-shadow:0 16px 46px rgba(53,75,46,.18)!important}
+.sidebar-header::before{background:linear-gradient(135deg,#FAD564,#8EBD9D,#B7D3EE)!important;box-shadow:0 0 16px rgba(250,213,100,.42)!important}.sidebar-header .brand{color:#FAD564!important}.sidebar-header h2,.sidebar-nav>ul>li>a,.sidebar-nav summary{color:#FFF9E7!important}.sidebar-nav a{color:#E9EBD8!important}.sidebar-nav a:hover,.sidebar-nav a:focus-visible,.sidebar-nav a.is-current,.nav-group summary:hover{color:#fff!important;background:linear-gradient(120deg,rgba(250,213,100,.17),rgba(142,189,157,.12))!important}.sidebar-nav .is-current{box-shadow:inset 0 0 0 1px rgba(250,213,100,.55)!important}.nav-group summary::after{border-color:#DDE6D0!important}.sidebar-nav>ul>li>.nav-group>.sub-menu{background:linear-gradient(145deg,rgba(42,65,38,.98),rgba(62,91,51,.98))!important;border-color:rgba(255,245,208,.22)!important}.sidebar-nav>ul>li>.nav-group>.sub-menu .nav-group{border-top-color:rgba(255,245,208,.10)!important}.sidebar-nav>ul>li>.nav-group>.sub-menu .sub-menu{border-left-color:rgba(255,245,208,.18)!important}
+/* hero: conserva el degradé, ahora dentro de la paleta */
+.home-page-v2 .home-hero--editorial,.home-hero{background:radial-gradient(circle at 86% 15%,rgba(250,213,100,.24),transparent 27%),radial-gradient(circle at 70% 84%,rgba(142,189,157,.22),transparent 34%),linear-gradient(118deg,#244B61 0%,#4F8ABD 56%,#9CC7E4 100%)!important;border-color:rgba(255,245,208,.32)!important;box-shadow:0 34px 90px rgba(36,75,97,.16)!important}.home-page-v2 .home-hero--editorial::before{background:linear-gradient(90deg,#FAD564,#FFF5D0,transparent)!important}.home-page-v2 .home-hero h1,.home-hero h1{color:#FFFDF5!important}.home-page-v2 .home-hero h1 em,.home-hero h1 em{background:linear-gradient(100deg,#FFF5D0 0%,#FAD564 58%,#B4BD62 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}.hero-label,.home-hero .hero-label{color:#FFF5D0!important}.home-hero-intro{color:#F7F6EC!important}.home-hero-link{background:linear-gradient(135deg,#B4BD62,#FAD564)!important;color:#2D422F!important;box-shadow:0 14px 34px rgba(180,189,98,.22)!important}.home-text-link{color:#FFFDF5!important;border-bottom-color:#FAD564!important}.home-text-link:hover{color:#FAD564!important}.home-hero-index{border-left-color:rgba(255,245,208,.30)!important}.home-hero-index .index-number{color:#FFFDF5!important}.home-hero-index .index-rule{background:linear-gradient(90deg,#FAD564,#B4BD62,#8EBD9D,rgba(142,189,157,0))!important}.home-hero-index p{color:#FFFDF5!important}.home-hero-index p strong{color:#FAD564!important}.home-hero-index small{color:#E7EDDF!important}
+/* fondos y tipografía globales */
+.main-content,.home-section,.main-content>.section,.content-wrap,.showcase-page{background:transparent!important;color:#2D422F!important}.home-section-heading .eyebrow,.section-header h2,.eyebrow{color:#77862E!important}.home-section-heading h2,.section-header p{color:#354B2E!important}.home-section-heading>p{color:#667360!important}.prose p,.info-card p,.cas-pillars span,.project-list li{color:#586859!important}.info-card,.detail-section,.showcase-card,.project-card,.card-link,.stub-box{background:linear-gradient(145deg,#FFFDF5 0%,#FFF8DE 100%)!important;border-color:rgba(81,107,61,.17)!important;box-shadow:0 18px 46px rgba(81,107,61,.08)!important;color:#2D422F!important}.info-card h2,.detail-section h2,.showcase-body h3,.project-card a.title,.card-link h3{color:#354B2E!important}.detail-section h3,.cas-pillars strong{color:#77862E!important}.page-profile .prose>p,.page-profile .prose>p:nth-child(n){background:linear-gradient(145deg,#FFFDF5,#FFF5D0)!important;color:#2D422F!important;border-color:rgba(81,107,61,.16)!important}.page-profile .profile-meta .label{color:#77862E!important}.page-profile .profile-meta .name{color:#354B2E!important}.page-profile .profile-photo{border-color:#B4BD62!important;box-shadow:0 0 0 5px #FFF9E7,0 0 0 6px rgba(180,189,98,.35),0 20px 46px rgba(81,107,61,.16)!important}
+/* banners internos: degradés conservados */
+.page-hero{background:radial-gradient(circle at 88% 18%,rgba(250,213,100,.22),transparent 28%),linear-gradient(125deg,#315D75 0%,#5A93BD 58%,#A5C9E2 100%)!important;border-color:rgba(255,245,208,.28)!important;box-shadow:0 26px 70px rgba(36,75,97,.13)!important}.page-hero h1,.page-hero .subtitle,.page-experience-detail .page-hero h1,.page-project .page-hero h1,.page-experience-detail .page-hero .subtitle,.page-project .page-hero .subtitle{color:#FFFDF5!important}.page-hero::after{background:linear-gradient(90deg,#FAD564,#B4BD62,transparent)!important}
+/* directorio */
+.home-directory-list{border-top-color:rgba(81,107,61,.24)!important}.home-directory-list>a{color:#354B2E!important;border-bottom-color:rgba(81,107,61,.17)!important}.home-directory-list>a:hover{background:linear-gradient(90deg,rgba(250,213,100,.22),rgba(142,189,157,.13),rgba(183,211,238,.09))!important;border-bottom-color:rgba(119,134,46,.42)!important}.home-directory-list>a>span{color:#77862E!important}.home-directory-list small{color:#4F8ABD!important}.home-directory-list h3{color:#354B2E!important}.home-directory-list p{color:#667360!important}.home-directory-list b{color:#77862E!important}
+/* experiencias */
+.month-title{color:#354B2E!important;border-bottom-color:rgba(81,107,61,.20)!important}.month-title::after{background:linear-gradient(90deg,#77862E,#FAD564)!important}.showcase-body,.showcase-body h3,.showcase-body p,.showcase-body a,.showcase-body span,.showcase-link{color:#2D422F!important}.showcase-body p{color:#586859!important}.showcase-link{border-bottom-color:rgba(119,134,46,.5)!important}.showcase-link:hover{color:#77862E!important}.pending-copy{color:#667360!important}
+/* proyectos con fotos: conservar imagen, teñir con la paleta */
+.home-project-card{border-color:rgba(81,107,61,.22)!important}.home-project-card:hover{border-color:rgba(250,213,100,.70)!important}.home-project-card:first-child{background:linear-gradient(180deg,rgba(36,75,97,.08),rgba(53,75,46,.44) 56%,rgba(45,66,47,.93) 100%),url('../Imagenes/fondopc.jpg') center/cover no-repeat!important}.home-project-card:last-child{background:linear-gradient(180deg,rgba(79,138,189,.08),rgba(53,75,46,.46) 56%,rgba(45,66,47,.93) 100%),url('../Imagenes/perros.png') center/cover no-repeat!important}.home-project-card h3,.home-project-card p{color:#fff!important}
+.dark-section{background:linear-gradient(135deg,rgba(180,189,98,.10),rgba(142,189,157,.10),rgba(183,211,238,.08))!important;border-color:rgba(81,107,61,.14)!important}.project-list li::before{background:#B4BD62!important}.project-card .logo-wrap{background:#FFF5D0!important}.project-card a.title:hover{color:#77862E!important}
+footer.page-footer,.page-footer{background:transparent!important;border-top-color:rgba(81,107,61,.18)!important;color:#667360!important}
+@media(max-width:800px){.home-hero-index{border-top-color:rgba(255,245,208,.28)!important;border-left:0!important}.sidebar{background:linear-gradient(145deg,rgba(42,65,38,.98),rgba(74,105,61,.98))!important}.menu-toggle{background:linear-gradient(135deg,#354B2E,#516B3D)!important;color:#FFF9E7!important;border-color:rgba(250,213,100,.35)!important}}
