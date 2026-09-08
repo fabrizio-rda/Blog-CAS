@@ -1,82 +1,43 @@
-/* PALETA DE PRUEBA 2 — Artio / forest sage — 2026-09-08
-   Reversible: styles.css + final-tweaks.css conservan la paleta original.
-   La prueba espacial anterior queda recuperable desde el historial de Git.
+/* PALETA DE PRUEBA 3 — Limoncello — 2026-09-08
+   Basada en la referencia enviada: Barley #FFF5D0, Naples #FAD564,
+   Light Olive #B4BD62, Neptune #8EBD9D, más azul cielo y azul profundo.
+   Reversible: las pruebas anteriores y la original permanecen en el historial Git.
 */
 :root{
-  --bg:#F6F2E7;
-  --surface:#E9E5D6;
-  --surface-raised:#FCFAF3;
-  --primary:#304F3F;
-  --primary-vivid:#4F735F;
-  --primary-glow:#A8CDB4;
-  --band-light:#C8D7E5;
-  --band-light-text:#304F3F;
-  --band-alt:#DCE8D9;
-  --border:rgba(48,79,63,.16);
-  --border-hover:rgba(48,79,63,.42);
-  --text:#263C32;
-  --text-muted:#68796F;
-  --accent:#6F9B7D;
-  --accent-soft:rgba(111,155,125,.16);
-  --prime-gold:#6F9B7D;
-  --prime-gold-soft:#DDE7D8;
-  --prime-gold-dim:rgba(111,155,125,.20);
-  --prime-ink:#263C32;
-  --prime-blue:#C8D7E5;
+  --bg:#FFF9E7;
+  --surface:#F4EED7;
+  --surface-raised:#FFFDF5;
+  --primary:#516B3D;
+  --primary-vivid:#77862E;
+  --primary-glow:#FAD564;
+  --band-light:#B7D3EE;
+  --band-light-text:#274F68;
+  --band-alt:#FFF5D0;
+  --border:rgba(81,107,61,.17);
+  --border-hover:rgba(250,213,100,.68);
+  --text:#2D422F;
+  --text-muted:#667360;
+  --accent:#FAD564;
+  --accent-soft:rgba(250,213,100,.22);
+  --prime-gold:#FAD564;
+  --prime-gold-soft:#FFF5D0;
+  --prime-gold-dim:rgba(250,213,100,.24);
+  --prime-ink:#244B61;
+  --prime-blue:#4F8ABD;
 }
-
-::selection{background:#A8CDB4!important;color:#263C32!important}
-body{background:#F6F2E7!important;color:#263C32!important}
-.sidebar{background:#304F3F!important;border-right-color:rgba(246,242,231,.16)!important}
-.sidebar-header .brand{color:#DDE7D8!important}
-.sidebar-header h2,.sidebar-nav>ul>li>a,.sidebar-nav summary{color:#F8F5EA!important}
-.sidebar-nav a{color:#D5DED7!important}
-.sidebar-nav a:hover,.sidebar-nav summary:hover{color:#fff!important;background:rgba(168,205,180,.13)!important}
-.sidebar-nav .is-current{box-shadow:inset 2px 0 0 #A8CDB4!important;background:rgba(168,205,180,.13)!important}
-.nav-group .sub-menu{border-left-color:rgba(221,231,216,.18)!important}
-
-/* Inicio inspirado en la paleta Artio: bosque, salvia, crema y azul grisáceo */
-.home-page-v2 .home-hero--editorial{
-  background:
-    radial-gradient(circle at 84% 18%,rgba(200,215,229,.34),transparent 28%),
-    radial-gradient(circle at 72% 86%,rgba(168,205,180,.18),transparent 35%),
-    linear-gradient(118deg,#304F3F 0%,#3B5D4B 62%,#263F34 100%)!important;
-  border-color:rgba(221,231,216,.18)!important;
-}
-.home-page-v2 .home-hero--editorial::before{background:linear-gradient(90deg,#A8CDB4,#C8D7E5,transparent)!important}
-.home-page-v2 .home-hero h1{color:#F8F5EA!important}
-.home-page-v2 .home-hero h1 em{background:linear-gradient(100deg,#DDE7D8 0%,#A8CDB4 52%,#C8D7E5 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
-.hero-label{color:#DDE7D8!important}
-.home-hero-intro{color:#E5E7DE!important}
-.home-hero-link{color:#F8F5EA!important}
-.home-text-link{color:#F8F5EA!important;border-bottom-color:rgba(168,205,180,.72)!important}
-.home-text-link:hover{color:#C8D7E5!important}
-.home-hero-index{border-left-color:rgba(221,231,216,.22)!important}
-.home-hero-index .index-number{color:#F8F5EA!important}
-.home-hero-index .index-rule{background:linear-gradient(90deg,#A8CDB4,#C8D7E5,rgba(200,215,229,0))!important}
-.home-hero-index p{color:#EEF0E8!important}
-.home-hero-index p strong{color:#C8D7E5!important}
-.home-hero-index small{color:#C5D0C7!important}
-
-.home-section{color:#263C32!important}
-.home-section-heading h2{color:#304F3F!important}
-.home-section-heading p{color:#68796F!important}
-.eyebrow{color:#6F9B7D!important}
-.home-directory-list{border-top-color:rgba(48,79,63,.22)!important}
-.home-directory-list>a{color:#304F3F!important;border-bottom-color:rgba(48,79,63,.16)!important}
-.home-directory-list>a:hover{background:linear-gradient(90deg,rgba(168,205,180,.20),rgba(200,215,229,.13),transparent)!important;border-bottom-color:rgba(79,115,95,.40)!important}
-.home-directory-list>a>span{color:#6F9B7D!important}
-.home-directory-list small{color:#4F735F!important}
-.home-directory-list h3{color:#304F3F!important}
-.home-directory-list p{color:#68796F!important}
-.home-directory-list b{color:#4F735F!important}
-
-.home-project-card{border-color:rgba(48,79,63,.20)!important}
-.home-project-card:hover{border-color:rgba(168,205,180,.58)!important}
-.home-project-card:first-child{background:linear-gradient(180deg,rgba(38,63,52,.14),rgba(38,63,52,.52) 56%,rgba(38,63,52,.94) 100%),url('../Imagenes/fondopc.jpg') center/cover no-repeat!important}
-.home-project-card:last-child{background:linear-gradient(180deg,rgba(38,63,52,.14),rgba(48,79,63,.55) 56%,rgba(38,63,52,.94) 100%),url('../Imagenes/perros.png') center/cover no-repeat!important}
-.home-project-card h3,.home-project-card p{color:#fff!important}
-
-.page-footer{background:#F6F2E7!important;border-top-color:rgba(48,79,63,.16)!important;color:#68796F!important}
-
-@media(max-width:800px){.home-hero-index{border-top-color:rgba(221,231,216,.22)!important;border-left:0!important}}
+::selection{background:#FAD564!important;color:#2D422F!important}
+body{background:#FFF9E7!important;color:#2D422F!important}
+.sidebar{background:#354B2E!important;border-right-color:rgba(255,245,208,.18)!important}
+.sidebar-header .brand{color:#FAD564!important}
+.sidebar-header h2,.sidebar-nav>ul>li>a,.sidebar-nav summary{color:#FFF9E7!important}
+.sidebar-nav a{color:#E4E8D3!important}
+.sidebar-nav a:hover,.sidebar-nav summary:hover{color:#FAD564!important;background:rgba(250,213,100,.10)!important}
+.sidebar-nav .is-current{box-shadow:inset 2px 0 0 #FAD564!important;background:rgba(250,213,100,.11)!important}
+.nav-group .sub-menu{border-left-color:rgba(255,245,208,.18)!important}
+.home-page-v2 .home-hero--editorial{background:radial-gradient(circle at 86% 15%,rgba(250,213,100,.28),transparent 27%),radial-gradient(circle at 70% 84%,rgba(142,189,157,.20),transparent 34%),linear-gradient(118deg,#244B61 0%,#4F8ABD 58%,#8BB9DE 100%)!important;border-color:rgba(255,245,208,.24)!important}
+.home-page-v2 .home-hero--editorial::before{background:linear-gradient(90deg,#FAD564,#FFF5D0,transparent)!important}
+.home-page-v2 .home-hero h1{color:#FFFDF5!important}
+.home-page-v2 .home-hero h1 em{background:linear-gradient(100deg,#FFF5D0 0%,#FAD564 58%,#B4BD62 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+.hero-label{color:#FFF5D0!important}.home-hero-intro{color:#F5F4E9!important}.home-hero-link{color:#FFFDF5!important}.home-text-link{color:#FFFDF5!important;border-bottom-color:#FAD564!important}.home-text-link:hover{color:#FAD564!important}.home-hero-index{border-left-color:rgba(255,245,208,.28)!important}.home-hero-index .index-number{color:#FFFDF5!important}.home-hero-index .index-rule{background:linear-gradient(90deg,#FAD564,#B4BD62,#8EBD9D,rgba(142,189,157,0))!important}.home-hero-index p{color:#FFFDF5!important}.home-hero-index p strong{color:#FAD564!important}.home-hero-index small{color:#E2E8DC!important}
+.home-section{color:#2D422F!important}.home-section-heading h2{color:#354B2E!important}.home-section-heading p{color:#667360!important}.eyebrow{color:#77862E!important}.home-directory-list{border-top-color:rgba(81,107,61,.24)!important}.home-directory-list>a{color:#354B2E!important;border-bottom-color:rgba(81,107,61,.17)!important}.home-directory-list>a:hover{background:linear-gradient(90deg,rgba(250,213,100,.22),rgba(142,189,157,.12),rgba(183,211,238,.08))!important;border-bottom-color:rgba(119,134,46,.42)!important}.home-directory-list>a>span{color:#77862E!important}.home-directory-list small{color:#4F8ABD!important}.home-directory-list h3{color:#354B2E!important}.home-directory-list p{color:#667360!important}.home-directory-list b{color:#77862E!important}
+.home-project-card{border-color:rgba(81,107,61,.22)!important}.home-project-card:hover{border-color:rgba(250,213,100,.70)!important}.home-project-card:first-child{background:linear-gradient(180deg,rgba(36,75,97,.10),rgba(53,75,46,.48) 56%,rgba(45,66,47,.94) 100%),url('../Imagenes/fondopc.jpg') center/cover no-repeat!important}.home-project-card:last-child{background:linear-gradient(180deg,rgba(79,138,189,.10),rgba(53,75,46,.50) 56%,rgba(45,66,47,.94) 100%),url('../Imagenes/perros.png') center/cover no-repeat!important}.home-project-card h3,.home-project-card p{color:#fff!important}.page-footer{background:#FFF9E7!important;border-top-color:rgba(81,107,61,.17)!important;color:#667360!important}@media(max-width:800px){.home-hero-index{border-top-color:rgba(255,245,208,.28)!important;border-left:0!important}}
