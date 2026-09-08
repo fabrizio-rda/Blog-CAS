@@ -1,0 +1,70 @@
+/* PALETA DE PRUEBA — 2026-09-08
+   Reversible: eliminar este stylesheet restaura la paleta anterior.
+   Hawkbit #FED46D · Mimolette #F6941D · Portland Orange #F0662A
+   Pohutukawa #6A1A29 · Catalina Blue #062375 · Midnight #070A3C
+*/
+:root{
+  --bg:#070A3C;
+  --surface:#0A1450;
+  --surface-raised:#102064;
+  --primary:#F0662A;
+  --primary-vivid:#F6941D;
+  --primary-glow:#FED46D;
+  --band-light:#FED46D;
+  --band-light-text:#070A3C;
+  --band-alt:#F6941D;
+  --border:rgba(254,212,109,.16);
+  --border-hover:rgba(246,148,29,.55);
+  --text:#FFF8E8;
+  --text-muted:#D7C9B0;
+  --accent:#F6941D;
+  --accent-soft:rgba(240,102,42,.16);
+  --prime-gold:#F6941D;
+  --prime-gold-soft:#FED46D;
+  --prime-gold-dim:rgba(246,148,29,.22);
+  --prime-ink:#070A3C;
+  --prime-blue:#062375;
+}
+
+::selection{background:rgba(240,102,42,.38)!important;color:#fff!important}
+body{background:#070A3C!important;color:#FFF8E8!important}
+.sidebar{background:#080E43!important;border-right-color:rgba(254,212,109,.18)!important}
+.sidebar-header .brand{color:#FED46D!important}
+.sidebar-nav a:hover,.sidebar-nav summary:hover{color:#FED46D!important}
+.sidebar-nav .is-current{box-shadow:inset 2px 0 0 #F0662A!important}
+
+/* Inicio: noche profunda + luz cálida, sin estética bancaria */
+.home-page-v2 .home-hero--editorial{
+  background:
+    radial-gradient(circle at 82% 16%,rgba(240,102,42,.18),transparent 27%),
+    radial-gradient(circle at 68% 78%,rgba(106,26,41,.30),transparent 34%),
+    linear-gradient(118deg,#070A3C 0%,#062375 62%,#10134D 100%)!important;
+  border-color:rgba(254,212,109,.17)!important;
+}
+.home-page-v2 .home-hero--editorial::before{background:linear-gradient(90deg,#F0662A,#FED46D,transparent)!important}
+.home-page-v2 .home-hero h1 em{background:linear-gradient(100deg,#FED46D 0%,#F6941D 48%,#F0662A 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+.home-hero-intro{color:#E6DDCF!important}
+.home-text-link{color:#FFF8E8!important;border-bottom-color:rgba(246,148,29,.65)!important}
+.home-text-link:hover{color:#FED46D!important}
+.home-hero-index{border-left-color:rgba(254,212,109,.20)!important}
+.home-hero-index .index-rule{background:linear-gradient(90deg,#F0662A,#F6941D,#FED46D,rgba(254,212,109,0))!important}
+.home-hero-index p{color:#F1E9DC!important}
+.home-hero-index p strong{color:#FED46D!important}
+.home-hero-index small{color:#C7B9A5!important}
+
+.home-directory-list{border-top-color:rgba(254,212,109,.20)!important}
+.home-directory-list>a{border-bottom-color:rgba(254,212,109,.13)!important}
+.home-directory-list>a:hover{background:linear-gradient(90deg,rgba(240,102,42,.10),rgba(106,26,41,.08),transparent)!important;border-bottom-color:rgba(246,148,29,.40)!important}
+.home-directory-list>a>span{color:#F6941D!important}
+.home-directory-list small{color:#FED46D!important}
+.home-directory-list p{color:#D8CDBD!important}
+.home-directory-list b{color:#F0662A!important}
+
+.home-project-card{border-color:rgba(254,212,109,.16)!important}
+.home-project-card:hover{border-color:rgba(246,148,29,.46)!important}
+.home-project-card:first-child{background:linear-gradient(180deg,rgba(7,10,60,.20),rgba(7,10,60,.58) 56%,rgba(7,10,60,.94) 100%),url('../Imagenes/fondopc.jpg') center/cover no-repeat!important}
+.home-project-card:last-child{background:linear-gradient(180deg,rgba(7,10,60,.22),rgba(106,26,41,.44) 58%,rgba(7,10,60,.94) 100%),url('../Imagenes/perros.png') center/cover no-repeat!important}
+
+.page-footer{border-top-color:rgba(254,212,109,.15)!important;color:#BFB3A3!important}
+
+@media(max-width:800px){.home-hero-index{border-top-color:rgba(254,212,109,.20)!important;border-left:0!important}}
