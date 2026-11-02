@@ -2,34 +2,14 @@ const toggle = document.querySelector('.menu-toggle');
 const sidebar = document.getElementById('sidebar');
 const overlay = document.querySelector('.overlay');
 
-// Carga la capa visual más reciente en todas las páginas, incluso las antiguas.
-(function loadVisualRefresh() {
-    const hasRefresh = [...document.querySelectorAll('link[rel="stylesheet"]')]
-        .some(link => link.href.includes('css/updates.css?v=20260903-7'));
-
-    if (!hasRefresh) {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'css/updates.css?v=20260903-7';
-        document.head.appendChild(link);
-    }
-
-    const hasFinalTweaks = [...document.querySelectorAll('link[rel="stylesheet"]')]
-        .some(link => link.href.includes('css/final-tweaks.css?v=20260903-7'));
-
-    if (!hasFinalTweaks) {
-        const tweaks = document.createElement('link');
-        tweaks.rel = 'stylesheet';
-        tweaks.href = 'css/final-tweaks.css?v=20260903-7';
-        document.head.appendChild(tweaks);
-    }
-})();
 
 function closeMenu() {
     if (!sidebar) return;
     sidebar.classList.remove('is-open');
     overlay?.classList.remove('is-visible');
     toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.setAttribute('aria-label', 'Abrir menú');
+    document.body.classList.remove('menu-open');
 }
 
 if (toggle && sidebar) {
@@ -37,6 +17,9 @@ if (toggle && sidebar) {
         const open = sidebar.classList.toggle('is-open');
         overlay?.classList.toggle('is-visible', open);
         toggle.setAttribute('aria-expanded', open);
+        toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+        document.body.classList.toggle('menu-open', open);
+        if (open) { sidebar.inert = false; sidebar.querySelector('a, summary')?.focus(); }
     });
 }
 
@@ -81,10 +64,10 @@ if (currentFile === 'proyectos.html') document.body.classList.add('page-projects
             ['mayo4.html', 'Donaciones al albergue Las patitas']
         ]},
         { name: 'Junio', items: [
-            ['junio1.html', 'Experiencia 1'],
-            ['junio2.html', 'Experiencia 2'],
-            ['junio3.html', 'Experiencia 3'],
-            ['junio4.html', 'Experiencia 4']
+            ['junio1.html', 'Participación en el kiosco CAS'],
+            ['junio2.html', 'Concientización: Casual Day y partido'],
+            ['junio3.html', 'Donación para la rifa Ponle Corazón'],
+            ['junio4.html', 'Salida a la USIL']
         ]},
         { name: 'Julio', items: [
             ['julio1.html', 'Partido de exhibición'],
@@ -211,10 +194,38 @@ if (currentFile === 'proyectos.html') document.body.classList.add('page-projects
     }
 })();
 
-// En escritorio, los menús superiores empiezan cerrados para no tapar la página.
-(function normalizeFloatingNav() {
-    if (window.innerWidth <= 900) return;
-    document.querySelectorAll('.sidebar-nav > ul > li > details.nav-group').forEach(details => {
-        details.open = false;
-    });
-})();
+// Mark the current route and reveal its parent groups in the scrolling rail.
+document.querySelectorAll('.sidebar-nav a').forEach(link => {
+    const isCurrent = new URL(link.href).pathname.split('/').pop() === currentFile;
+    link.classList.toggle('is-current', isCurrent);
+    if (!isCurrent) return;
+    link.setAttribute('aria-current', 'page');
+    let parent = link.parentElement;
+    while (parent && parent !== sidebar) {
+        if (parent.tagName === 'DETAILS') parent.open = true;
+        parent = parent.parentElement;
+    }
+});
+
+const mobileMenu = window.matchMedia('(max-width: 760px)');
+function syncMenuAccess() {
+    const open = sidebar?.classList.contains('is-open');
+    if (sidebar) sidebar.inert = mobileMenu.matches && !open;
+    document.querySelector('.main-content')?.toggleAttribute('inert', mobileMenu.matches && open);
+}
+toggle?.addEventListener('click', syncMenuAccess);
+overlay?.addEventListener('click', () => { syncMenuAccess(); toggle?.focus(); });
+mobileMenu.addEventListener('change', () => { closeMenu(); syncMenuAccess(); });
+syncMenuAccess();
+document.addEventListener('keydown', event => {
+    if (!mobileMenu.matches || !sidebar?.classList.contains('is-open')) return;
+    if (event.key === 'Escape') {
+        closeMenu(); syncMenuAccess(); toggle?.focus();
+    }
+    if (event.key !== 'Tab') return;
+    const focusable = [toggle, ...sidebar.querySelectorAll('a, summary')]
+        .filter(element => element && element.getClientRects().length);
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+});
