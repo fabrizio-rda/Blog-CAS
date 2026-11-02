@@ -8,7 +8,7 @@
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
-body{margin:0;min-height:100svh;font:15px/1.7 var(--font);color:var(--ink);background:#f8d5c5;background-image:linear-gradient(110deg,#f6be8d 0%,#f8d0ad 32%,#f4c5cd 68%,#edb3cd 100%);-webkit-font-smoothing:antialiased}
+body{margin:0;min-height:100svh;font:15px/1.7 var(--font);color:var(--ink);background:#f8d5c5;background-image:linear-gradient(90deg,#f6be8d 0%,#f8d0ad 32%,#f4c5cd 68%,#edb3cd 100%);-webkit-font-smoothing:antialiased}
 a{color:var(--blue);text-underline-offset:4px}
 button{font:inherit}
 img{max-width:100%;height:auto;display:block}
@@ -141,7 +141,7 @@ footer.page-footer{margin-top:40px;padding:28px 12px;border-top:1px solid #aebbd
 @media(min-width:1600px){.main-content{padding-inline:48px}.home-directory-list>a{min-height:235px}.home-hero{min-height:340px}}
 @media(max-width:1200px){:root{--sidebar:210px}.main-content{padding-inline:24px}.home-directory-list{grid-template-columns:1fr 1fr}.home-directory-list>a{min-height:215px}.home-hero{gap:24px;grid-template-columns:minmax(0,1.4fr) minmax(195px,.8fr);padding:30px}.home-hero h1{font-size:38px}.home-project-card{gap:16px;padding:20px}.project-logo{width:72px;height:80px}.home-project-card h3{font-size:19px}}
 @media(max-width:950px){.home-hero{grid-template-columns:1fr}.home-hero-index{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:18px}.home-hero-index .index-number,.index-rule{display:none}.home-hero-index p{margin:0;gap:6px;font-size:11px}.home-hero-index small{grid-column:1/-1;margin-top:5px}.home-hero-index strong{width:26px;height:26px;border-radius:8px}.home-project-grid,.page-projects-index .showcase-page{grid-template-columns:1fr}.home-section-heading{align-items:start;flex-direction:column;gap:10px}.month-block{grid-template-columns:1fr}.profile-header{flex-wrap:wrap}}
-@media(max-width:760px){body{background-image:linear-gradient(110deg,#f6be8d 0%,#f8d0ad 32%,#f4c5cd 68%,#edb3cd 100%)}.main-content{margin-left:0;padding:16px 20px 0}.menu-toggle{display:flex;position:fixed;inset:25px auto auto 28px;align-items:center;justify-content:center;width:44px;height:44px;z-index:200;border:1px solid #8caecd;border-radius:12px;background:linear-gradient(135deg,#63415d,#a35f76);color:white;font-size:20px;cursor:pointer}.sidebar{inset:16px auto 16px 12px;width:268px;max-width:calc(100vw - 40px);transform:translateX(calc(-100% - 16px));transition:transform .22s}.sidebar.is-open{transform:translateX(0)}.sidebar-header{padding-top:70px}.overlay{position:fixed;inset:0;background:#142c4d80;z-index:90}.overlay.is-visible{display:block}body.menu-open{overflow:hidden}.blog-topbar{min-height:62px;padding:12px 14px 12px 66px;margin-bottom:20px}.blog-topbar a{font-size:12px}.blog-topbar .topbar-badge{font-size:10px;padding:5px 8px}.home-hero{padding:28px 24px;border-radius:20px;gap:26px}.home-hero h1{font-size:38px;letter-spacing:-1.2px}.home-hero-intro{font-size:13px}.home-hero-index{padding:15px}.home-directory-list{gap:12px}.home-directory-list>a{padding:20px;min-height:235px}.home-directory-list h3{font-size:21px}.home-directory-list b{right:15px;top:18px}.home-section{margin-top:30px}.home-section-heading h2{font-size:27px}.home-project-card h3{font-size:21px}.page-hero{padding:26px 24px;margin-bottom:20px}.info-card,.detail-section,.prose>p{padding:24px}.profile-header{padding:24px;gap:18px}.profile-photo{width:110px;height:110px}.month-block{gap:18px}.showcase-media{padding:20px;min-height:180px}.showcase-body{padding:24px}.detail-visual{padding:16px}.page-footer{margin-top:28px}}
+@media(max-width:760px){body{background-image:linear-gradient(90deg,#f6be8d 0%,#f8d0ad 32%,#f4c5cd 68%,#edb3cd 100%)}.main-content{margin-left:0;padding:16px 20px 0}.menu-toggle{display:flex;position:fixed;inset:25px auto auto 28px;align-items:center;justify-content:center;width:44px;height:44px;z-index:200;border:1px solid #8caecd;border-radius:12px;background:linear-gradient(135deg,#63415d,#a35f76);color:white;font-size:20px;cursor:pointer}.sidebar{inset:16px auto 16px 12px;width:268px;max-width:calc(100vw - 40px);transform:translateX(calc(-100% - 16px));transition:transform .22s}.sidebar.is-open{transform:translateX(0)}.sidebar-header{padding-top:70px}.overlay{position:fixed;inset:0;background:#142c4d80;z-index:90}.overlay.is-visible{display:block}body.menu-open{overflow:hidden}.blog-topbar{min-height:62px;padding:12px 14px 12px 66px;margin-bottom:20px}.blog-topbar a{font-size:12px}.blog-topbar .topbar-badge{font-size:10px;padding:5px 8px}.home-hero{padding:28px 24px;border-radius:20px;gap:26px}.home-hero h1{font-size:38px;letter-spacing:-1.2px}.home-hero-intro{font-size:13px}.home-hero-index{padding:15px}.home-directory-list{gap:12px}.home-directory-list>a{padding:20px;min-height:235px}.home-directory-list h3{font-size:21px}.home-directory-list b{right:15px;top:18px}.home-section{margin-top:30px}.home-section-heading h2{font-size:27px}.home-project-card h3{font-size:21px}.page-hero{padding:26px 24px;margin-bottom:20px}.info-card,.detail-section,.prose>p{padding:24px}.profile-header{padding:24px;gap:18px}.profile-photo{width:110px;height:110px}.month-block{gap:18px}.showcase-media{padding:20px;min-height:180px}.showcase-body{padding:24px}.detail-visual{padding:16px}.page-footer{margin-top:28px}}
 @media(max-width:390px){.main-content{padding:12px 14px 0}.menu-toggle{top:21px;left:22px}.blog-topbar{padding-left:62px}.blog-topbar .topbar-badge{font-size:9px;padding:4px 7px}.home-hero{padding:24px 20px}.home-hero h1{font-size:33px}.home-hero-index{grid-template-columns:1fr;padding:18px;gap:12px}.home-hero-index p{font-size:12px;gap:10px}.home-directory-list{grid-template-columns:1fr}.home-directory-list>a{min-height:0;padding:22px}.home-directory-list>a>span{margin-bottom:14px}.home-directory-list h3{font-size:23px}.home-directory-list p{max-width:230px}.home-project-card{align-items:start;padding:20px;gap:14px}.project-logo{width:62px;height:70px;border-radius:12px}.home-project-card h3{font-size:19px}.home-hero-actions{gap:14px}.info-card,.detail-section,.prose>p{padding:22px 20px}.info-card .profile-header{flex-direction:column;align-items:start}.page-hero{padding:24px 20px}.showcase-body{padding:22px 20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 .project-logo-circle{width:150px;height:150px;margin:26px auto;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:24px;background:#fffaf2;border:1px solid #c4d5e6;padding:14px}
@@ -162,3 +162,43 @@ footer.page-footer{margin-top:40px;padding:28px 12px;border-top:1px solid #aebbd
 @media(min-width:1600px){.home-directory-list>a{min-height:195px}}
 @media(max-width:390px){.blog-topbar .topbar-badge{display:none}.blog-topbar a{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.showcase-item{transition:none}}
+
+/* Consistent canvas and white lettering on sufficiently deep surfaces. */
+.home-directory-list>a:first-child{background:linear-gradient(125deg,#225b96,#4195b6);border-color:#86c7e0;color:white}
+.home-project-card:last-child{background:linear-gradient(120deg,#285c97,#559cb9);border-color:#8dc7df;color:white}
+.home-hero{background:radial-gradient(ellipse at 100% 0%,#dfb5dc66,transparent 65%),linear-gradient(118deg,#d8edf9,#9bcce3 54%,#84b9d5);border-color:#d0ebf8}
+.home-hero-index{background:linear-gradient(140deg,#e1f4ffbb,#c6e9f580)}
+.home-hero h1 em{text-decoration-color:#70a6ce}
+.index-rule{background:linear-gradient(90deg,#4b87b9,#b385b5,#9dcde4)}
+.home-hero-index p:nth-of-type(2) strong{background:#c9e9fb;color:#285c91}
+.cas-pillars li:nth-child(2){background:linear-gradient(120deg,#245c98,#408ba9);border-color:#80bdd7}
+.profile-header{background:linear-gradient(120deg,#245c98,#448fab);border-color:#8ac1da}
+.page-profile .content-wrap>.profile-header .profile-photo{width:clamp(190px,24vw,280px);height:clamp(190px,24vw,280px);border-radius:28px;flex:none}
+.page-profile .profile-header{gap:32px}
+.profile-meta .label,.profile-meta .name,.profile-meta .subtitle{color:white}
+.showcase-media{padding:0;min-height:0;aspect-ratio:16/10;background:linear-gradient(130deg,#29629a,#7ebad4)}
+.showcase-media img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;border-radius:0}
+.showcase-media .showcase-placeholder{height:100%;border:0;border-radius:0}
+.showcase-body,.detail-section,.info-card,.prose>p{background:linear-gradient(135deg,#3b405c,#56516b);color:white}
+.showcase-body h3,.showcase-body p,.showcase-body .showcase-link,.detail-section p,.detail-section li,.info-card p,.prose p,.cas-pillars span{color:white}
+.showcase-body .global-tag{background:#ffffff16;color:white}
+.info-card .profile-meta .subtitle{color:white}
+.cas-pillars li{background:linear-gradient(120deg,#65537e,#7a6085);color:white}
+.cas-pillars li:nth-child(2){background:linear-gradient(120deg,#245c98,#408ba9);color:white}
+.cas-pillars li:nth-child(3){background:linear-gradient(120deg,#35685d,#46786b);color:white}
+.showcase-link,.detail-back{color:white}
+.detail-back{background:linear-gradient(120deg,#285c97,#4087a4)}
+.month-title{color:white;background:linear-gradient(110deg,#70435e,#87596d);padding:10px 18px;border-radius:12px;text-shadow:0 1px 2px #392a4340}
+.eyebrow{color:white;text-shadow:0 1px 4px #603044b3}
+.showcase-placeholder,.detail-image-placeholder{background:linear-gradient(125deg,#285c97,#4a8ba5);color:white}
+.showcase-placeholder::before,.detail-image-placeholder::before{color:white}
+.detail-visual{background:linear-gradient(130deg,#3674aa,#9dcce0)}
+footer.page-footer{color:white;background:#65405d99;border-radius:14px;margin-bottom:16px}
+a:where(:not(.sidebar-nav a):not(.home-directory-list a):not(.home-hero a):not(.home-project-card):not(.blog-topbar a)){text-underline-offset:4px}
+/* Existing nature photograph, used decoratively rather than as activity evidence. */
+.nature-experience .page-hero{background:linear-gradient(100deg,#123e4ac9,#1e3d5566),url('../Imagenes/Dunas.png') center/cover;min-height:240px;display:flex;flex-direction:column;justify-content:center}
+@media(max-width:760px){.showcase-media{padding:0;min-height:0}.page-profile .content-wrap>.profile-header .profile-photo{width:200px;height:200px}.page-profile .profile-header{gap:22px}.nature-experience .page-hero{min-height:200px}}
+.blog-topbar{background:linear-gradient(110deg,#65405d,#88596f);border-color:#b88a9c}.blog-topbar a{color:white}
+.home-section-heading>p{color:white;text-shadow:0 1px 4px #60304499}
+.detail-section h2,.detail-section h3,.info-card h2{color:white}
+.home-hero-index p:nth-of-type(2) strong{background:#3975a7;color:white}
