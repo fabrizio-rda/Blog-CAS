@@ -202,3 +202,5 @@ a:where(:not(.sidebar-nav a):not(.home-directory-list a):not(.home-hero a):not(.
 .home-section-heading>p{color:white;text-shadow:0 1px 4px #60304499}
 .detail-section h2,.detail-section h3,.info-card h2{color:white}
 .home-hero-index p:nth-of-type(2) strong{background:#3975a7;color:white}
+/* Main experience cards: navy to sky blue, retaining white type. */
+.page-experiences-index .showcase-body{background:linear-gradient(120deg,#123763 0%,#245f91 52%,#438eae 100%)}
