@@ -204,3 +204,28 @@ a:where(:not(.sidebar-nav a):not(.home-directory-list a):not(.home-hero a):not(.
 .home-hero-index p:nth-of-type(2) strong{background:#3975a7;color:white}
 /* Main experience cards: navy to sky blue, retaining white type. */
 .page-experiences-index .showcase-body{background:linear-gradient(120deg,#123763 0%,#245f91 52%,#438eae 100%)}
+
+/* Interior routes have their own atmosphere; warm canvas is reserved for home. */
+body:not(.home-page-v2){background-color:#d2e6ef;background-image:linear-gradient(90deg,#b6d9e7 0%,#d3e8ec 48%,#d6cdea 100%)}
+body.page-profile{background-image:linear-gradient(90deg,#c5d7ef,#e0d6ef 55%,#edcfe0)}
+body.page-cas{background-image:linear-gradient(90deg,#add8ce,#d1e9df 50%,#c2e2ee)}
+body.page-projects-index,body.page-project{background-image:linear-gradient(90deg,#c6cfed,#e0d7ef 55%,#d6c2e2)}
+.sidebar-ib-logo{width:72px;height:72px;object-fit:contain;background:white;padding:3px;border-radius:50%;border-color:#e1f5ff}
+body:not(.home-page-v2) .page-hero{background:linear-gradient(115deg,#1d436e,#27748d 60%,#4b9caa);border-color:#8bbccf}
+body.page-profile .page-hero{background:linear-gradient(115deg,#3b4e80,#6169a3 60%,#8d8fbb)}
+body.page-cas .page-hero{background:linear-gradient(115deg,#245d59,#338779 60%,#65ac9c)}
+body.page-projects-index .page-hero,body.page-project .page-hero{background:linear-gradient(115deg,#403e76,#686398 60%,#9d84ae)}
+body.nature-experience .page-hero{background:linear-gradient(100deg,#123e4ac9,#1e3d5566),url('../Imagenes/Dunas.png') center/cover}
+.page-experiences-index .month-title{font-size:22px;padding:8px 16px;background:linear-gradient(110deg,#23536b,#398b94);border:1px solid #76aeb7;margin-top:0}
+.page-experiences-index .month-block:nth-child(2n) .month-title{background:linear-gradient(110deg,#294a78,#4e80a9)}
+.page-experiences-index .month-block:nth-child(3n) .month-title{background:linear-gradient(110deg,#2c625e,#569582)}
+.page-experiences-index .month-block{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:28px}
+.page-experiences-index .showcase-item{border-radius:16px}
+.page-experiences-index .showcase-media{aspect-ratio:16/9;min-height:0;padding:0}
+.page-experiences-index .showcase-body{padding:18px;gap:0}
+.page-experiences-index .showcase-body h3{font-size:17px;line-height:1.35;margin-bottom:10px;letter-spacing:-.25px}
+.page-experiences-index .showcase-body p{font-size:12px;line-height:1.7}
+.page-experiences-index .showcase-body .global-tag{font-size:10px;padding:9px 10px;margin:12px 0}
+.page-experiences-index .showcase-link{font-size:11px;min-height:40px;padding-top:10px}
+@media(max-width:1150px){.page-experiences-index .month-block{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.page-experiences-index .month-block{grid-template-columns:1fr;gap:14px}.page-experiences-index .showcase-media{aspect-ratio:auto;height:160px}.page-experiences-index .showcase-body{padding:17px}.page-experiences-index .showcase-body h3{font-size:18px}}
